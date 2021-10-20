@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="" />
+        <meta name="author" content="Ser-AM" />
+        <title>Gestor de Candidatos</title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="assets/js/jquery.min.js"></script>
+    	<script src="assets/js/funciones.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div>
+                <img src="assets/images/Gestor_Candidatos.png" alt="">
+            </div>
+            <div></div>
+        </header>
+        <section id="section1">
+            <div class="ficha">
+                <div class="foto">
+                    <fieldset>
+                        <legend>Foto</legend>
+                    </fieldset>
+                </div>
+                <div class="datos">
+                    <fieldset>
+                        <legend>Datos Personales:</legend>
+                        <input type="text" name="nombre" placeholder="Nombre...">
+                        <input type="text" name="apellidos" placeholder="Apellidos...">                  
+                        <input type="email" name="email" placeholder="Email...">
+                        <input type="tel" name="telefono" placeholder="Teléfono...">
+                    </fieldset>
+                </div>                
+                    
+            </div>
+            <div>
+                <fieldset>
+                    <div class="seleccionar-especialidad">
+                        <select name= "especialidad" class="especialidad">
+                            <option value="" selected disabled hidden>Especialidad</option>
+                            <option value="mecanica">Mecánica</option>
+                            <option value="arquitectura">Arquitectura</option>
+                            <option value="obra-civil">Obra Civil</option>
+                            <option value="industrial">Industrial</option>
+                        </select>
+                    </div>
+                    <div class="bloque-especialidad mecanica">
+                        <div class="especialidad mecanica">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad mecanica">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad mecanica">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad mecanica">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa mecanica">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="SOLIDWORKS">SOLIDWORKS</option>
+                                    <option value="SOLIDEDGE">SOLIDEDGE</option>
+                                    <option value="CATIA">CATIA</option>
+                                    <option value="INVENTOR">INVENTOR</option>
+                                    <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
+                                    <option value="AUTOCAD 2D">AUTOCAD 2D</option>
+                                    <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
+                                    <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
+                                    <option value="ANSYS">ANSYS</option>
+                                    <option value="TOP SOLID">TOP SOLID</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloque-especialidad arquitectura">
+                        <div class="especialidad arquitectura">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad arquitectura">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad arquitectura">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad arquitectura">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa arquitectura">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="REVIT">REVIT</option>
+                                    <option value="REVIT ARQ">REVIT ARQ</option>
+                                    <option value="REVIT MEP">REVIT MEP</option>
+                                    <option value="REVIT STRUC">REVIT STRUC</option>
+                                    <option value="AECOSIM">AECOSIM</option>
+                                    <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
+                                    <option value="SKETCH UP">SKETCH UP</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloque-especialidad obra-civil">
+                        <div class="especialidad obra-civil">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad obra-civil">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad obra-civil">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad obra-civil">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa obra-civil">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="TEKLA">TEKLA</option>
+                                    <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
+                                    <option value="CYPE">CYPE</option>
+                                    <option value="SAP2000">SAP2000</option>
+                                    <option value="STAAD PRO">STAAD PRO</option>
+                                    <option value="TRICALC">TRICALC</option>
+                                    <option value="PRESTO">PRESTO</option>
+                                    <option value="MENFIS">MENFIS</option>
+                                    <option value="ARQUÍMEDES">ARQUÍMEDES</option>
+                                    <option value="ArchiCAD">ArchiCAD</option>
+                                    <option value="MICROSTATION">MICROSTATION</option>
+                                    <option value="ISPOL">ISPOL</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloque-especialidad industrial">
+                        <div class="especialidad industrial">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad industrial">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad industrial">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="especialidad industrial">
+                            <div class="programa-row-left">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                            <div class="programa-row-right">
+                                <select name= "programas" class="programa industrial">
+                                    <option value="" selected disabled hidden>Aplicación</option>
+                                    <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
+                                    <option value="SMART PLANT 3D">SMART PLANT 3D</option>
+                                    <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
+                                    <option value="PDMS">PDMS</option>
+                                    <option value="PDS">PDS</option>
+                                    <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
+                                    <option value="NAVISWORKS">NAVISWORKS</option>
+                                </select>
+                                <select name= "experiencia" class="experiencia">
+                                    <option value="" selected disabled hidden>Experiencia</option>
+                                    <option value="1">0-1 </option>
+                                    <option value="2">1-2</option>
+                                    <option value="3">2-4</option>
+                                    <option value="4">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </section>      
+    </body>
+</html>
