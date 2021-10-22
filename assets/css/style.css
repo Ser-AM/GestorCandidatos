@@ -78,6 +78,10 @@ div.foto{
 }
 div.datos{
     width: 50%;
+    display: flex;
+}
+textarea{
+    width: 100%;
 }
 fieldset{
     margin: 0 auto;
