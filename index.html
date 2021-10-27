@@ -16,12 +16,12 @@
             <div>
                 <img src="assets/images/Gestor_Candidatos.png" alt="">
                 <nav>
-                    <a href="#" class="myButton">+  Añadir Perfil </a>
+                    <a href="" class="myButton">+  Añadir Perfil </a>
                     <a href="#" class="myButton">Listado de Perfiles</a>
                 </nav>
             </div>
         </header>
-        <form action="" method="post">
+        <form action="assets/php/insertarCandidato.php" method="post">
             <div class="ficha">
                 <div class="datos">
                     <fieldset>
@@ -50,7 +50,7 @@
                             <option value="industrial">Industrial</option>
                         </select>
                     </div>
-                    <div class="bloque-inicial">
+                    <!-- <div class="bloque-inicial">
                         <div class="especialidad inicial">
                             <div class="programa-row-left">
                                 <select name= "programas" class="programa" disabled>
@@ -107,12 +107,12 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="bloque-especialidad mecanica">
                         <div class="especialidad mecanica">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa mecanica">
-                                    <option value="" selected disabled hidden>Programa</option>
+                                <select name= "software1" class="programa mecanica">
+                                    <option value=" " selected disabled hidden>Programa</option>
                                     <option value="SOLIDWORKS">SOLIDWORKS</option>
                                     <option value="SOLIDEDGE">SOLIDEDGE</option>
                                     <option value="CATIA">CATIA</option>
@@ -124,8 +124,8 @@
                                     <option value="ANSYS">ANSYS</option>
                                     <option value="TOP SOLID">TOP SOLID</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
-                                    <option value="" selected disabled hidden>Experiencia</option>
+                                <select name= "experiencia1" class="experiencia">
+                                    <option value=" " selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
                                     <option value="3">3. Avanzado (Tiempo sin usarlo)</option>
@@ -134,7 +134,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa mecanica">
+                                <select name= "software2" class="programa mecanica">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="SOLIDWORKS">SOLIDWORKS</option>
                                     <option value="SOLIDEDGE">SOLIDEDGE</option>
@@ -147,7 +147,7 @@
                                     <option value="ANSYS">ANSYS</option>
                                     <option value="TOP SOLID">TOP SOLID</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia2" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -159,7 +159,7 @@
                         </div>
                         <div class="especialidad mecanica">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa mecanica">
+                                <select name= "software3" class="programa mecanica">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="SOLIDWORKS">SOLIDWORKS</option>
                                     <option value="SOLIDEDGE">SOLIDEDGE</option>
@@ -172,7 +172,7 @@
                                     <option value="ANSYS">ANSYS</option>
                                     <option value="TOP SOLID">TOP SOLID</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia3" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -182,7 +182,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa mecanica">
+                                <select name= "software4" class="programa mecanica">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="SOLIDWORKS">SOLIDWORKS</option>
                                     <option value="SOLIDEDGE">SOLIDEDGE</option>
@@ -195,7 +195,7 @@
                                     <option value="ANSYS">ANSYS</option>
                                     <option value="TOP SOLID">TOP SOLID</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia4" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -207,7 +207,7 @@
                         </div>
                         <div class="especialidad general">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa general">
+                                <select name= "software5" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -255,7 +255,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia5" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -265,7 +265,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa general">
+                                <select name= "software6" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -313,7 +313,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia6" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -327,7 +327,7 @@
                     <div class="bloque-especialidad arquitectura">
                         <div class="especialidad arquitectura">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa arquitectura">
+                                <select name= "software1" class="programa arquitectura">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="REVIT">REVIT</option>
                                     <option value="REVIT ARQ">REVIT ARQ</option>
@@ -338,7 +338,7 @@
                                     <option value="SKETCH UP">SKETCH UP</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia1" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -348,7 +348,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa arquitectura">
+                                <select name= "software2" class="programa arquitectura">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="REVIT">REVIT</option>
                                     <option value="REVIT ARQ">REVIT ARQ</option>
@@ -359,7 +359,7 @@
                                     <option value="SKETCH UP">SKETCH UP</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia2" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -371,7 +371,7 @@
                         </div>
                         <div class="especialidad arquitectura">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa arquitectura">
+                                <select name= "software3" class="programa arquitectura">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="REVIT">REVIT</option>
                                     <option value="REVIT ARQ">REVIT ARQ</option>
@@ -382,7 +382,7 @@
                                     <option value="SKETCH UP">SKETCH UP</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia3" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -392,7 +392,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa arquitectura">
+                                <select name= "software4" class="programa arquitectura">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="REVIT">REVIT</option>
                                     <option value="REVIT ARQ">REVIT ARQ</option>
@@ -403,7 +403,7 @@
                                     <option value="SKETCH UP">SKETCH UP</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia4" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -415,7 +415,7 @@
                         </div>
                         <div class="especialidad general">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa general">
+                                <select name= "software5" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -463,7 +463,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia5" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -473,7 +473,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa general">
+                                <select name= "software6" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -521,7 +521,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia6" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -535,7 +535,7 @@
                     <div class="bloque-especialidad obra-civil">
                         <div class="especialidad obra-civil">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa obra-civil">
+                                <select name= "software1" class="programa obra-civil">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="TEKLA">TEKLA</option>
                                     <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
@@ -550,7 +550,7 @@
                                     <option value="MICROSTATION">MICROSTATION</option>
                                     <option value="ISPOL">ISPOL</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia1" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -560,7 +560,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa obra-civil">
+                                <select name= "software2" class="programa obra-civil">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="TEKLA">TEKLA</option>
                                     <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
@@ -575,7 +575,7 @@
                                     <option value="MICROSTATION">MICROSTATION</option>
                                     <option value="ISPOL">ISPOL</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia2" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -587,7 +587,7 @@
                         </div>
                         <div class="especialidad obra-civil">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa obra-civil">
+                                <select name= "software3" class="programa obra-civil">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="TEKLA">TEKLA</option>
                                     <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
@@ -602,7 +602,7 @@
                                     <option value="MICROSTATION">MICROSTATION</option>
                                     <option value="ISPOL">ISPOL</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia3" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -612,7 +612,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa obra-civil">
+                                <select name= "software4" class="programa obra-civil">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="TEKLA">TEKLA</option>
                                     <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
@@ -627,7 +627,7 @@
                                     <option value="MICROSTATION">MICROSTATION</option>
                                     <option value="ISPOL">ISPOL</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia4" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -639,7 +639,7 @@
                         </div>
                         <div class="especialidad general">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa general">
+                                <select name= "software5" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -687,7 +687,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia5" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -697,7 +697,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa general">
+                                <select name= "software6" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -745,7 +745,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia6" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -759,7 +759,7 @@
                     <div class="bloque-especialidad industrial">
                         <div class="especialidad industrial">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa industrial">
+                                <select name= "software1" class="programa industrial">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
                                     <option value="SMART PLANT 3D">SMART PLANT 3D</option>
@@ -769,7 +769,7 @@
                                     <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia1" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -779,7 +779,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa industrial">
+                                <select name= "software2" class="programa industrial">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
                                     <option value="SMART PLANT 3D">SMART PLANT 3D</option>
@@ -789,7 +789,7 @@
                                     <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia2" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -801,7 +801,7 @@
                         </div>
                         <div class="especialidad industrial">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa industrial">
+                                <select name= "software3" class="programa industrial">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
                                     <option value="SMART PLANT 3D">SMART PLANT 3D</option>
@@ -811,7 +811,7 @@
                                     <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia3" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -821,7 +821,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa industrial">
+                                <select name= "software4" class="programa industrial">
                                     <option value="" selected disabled hidden>Programa</option>
                                     <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
                                     <option value="SMART PLANT 3D">SMART PLANT 3D</option>
@@ -831,7 +831,7 @@
                                     <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
                                     <option value="NAVISWORKS">NAVISWORKS</option>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia4" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -843,7 +843,7 @@
                         </div>
                         <div class="especialidad general">
                             <div class="programa-row-left">
-                                <select name= "programas" class="programa general">
+                                <select name= "software5" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -891,7 +891,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia5" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -901,7 +901,7 @@
                                 </select>
                             </div>
                             <div class="programa-row-right">
-                                <select name= "programas" class="programa general">
+                                <select name= "software6" class="programa general">
                                     <option value="" selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
@@ -949,7 +949,7 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
-                                <select name= "experiencia" class="experiencia">
+                                <select name= "experiencia6" class="experiencia">
                                     <option value="" selected disabled hidden>Experiencia</option>
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
@@ -960,6 +960,7 @@
                             </div>
                         </div>
                     </div>
+                    <input type="submit" name="enviaFormulario" value="Insertar">
                 </fieldset>
             </div>
         </form>      

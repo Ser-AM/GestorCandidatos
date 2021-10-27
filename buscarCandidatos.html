@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="" />
+        <meta name="author" content="Ser-AM" />
+        <title>Gestor de Candidatos</title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="assets/js/jquery.min.js"></script>
+    	<script src="assets/js/funciones.js"></script>
+    </head>
+    <body>
+
+        <header>
+            <div>
+                <button><a href="index.html">Añadir candidatos</a></button>
+                <button><a href="buscarCandidatos.html">Buscar candidatos</a></button>
+            </div>
+            <div>
+                <img src="assets/images/Gestor_Candidatos.png" alt="">
+            </div>
+        </header>
+        <div>
+            <form action="assets/php/buscarCandidatos.php" method="post">
+                <label>Especialidad: </label>
+                <select name= "especialidad" class="especialidad">
+                    <option value="mecanica">Mecánica</option>
+                    <option value="arquitectura">Arquitectura</option>
+                    <option value="obra-civil">Obra Civil</option>
+                    <option value="industrial">Industrial</option>
+                </select>
+                <input type="text" name="notas" placeholder="Buscar en notas">
+                <input type="submit" name="buscarCandidato" value="Buscar">
+            </form>
+        </div>
+    </body>
+</html>
