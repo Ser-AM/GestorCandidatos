@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content="" />
-        <meta name="author" content="Ser-AM" />
+        <meta name="description" content=""/>
         <title>Gestor de Candidatos</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/Gestor_Candidatos_Icon.png">
         <link rel="stylesheet" href="assets/css/style.css"/>
         <script src="assets/js/jquery.min.js"></script>
     	<script src="assets/js/funciones.js"></script>
@@ -13,33 +13,60 @@
     <body>
 
         <header>
-            <div>
-                <img src="assets/images/Gestor_Candidatos.png" alt="">
-                <nav>
-                    <a href="" class="myButton">+  Añadir Perfil </a>
-                    <a href="#" class="myButton">Listado de Perfiles</a>
-                </nav>
+            <div class="header">
+                <div id="logo">
+                    <img src="assets/images/Gestor_Candidatos.png" alt="">
+                </div>
             </div>
+                <nav>
+                    <button><a href="index.html">Añadir candidato</a></button>
+                    <button><a href="buscarCandidatos.html">Buscar candidatos</a></button>
+                </nav>
         </header>
         <form action="assets/php/insertarCandidato.php" method="post">
             <div class="ficha">
-                <div class="datos">
-                    <fieldset>
-                        <legend>Datos Personales:</legend>
-                        <input type="text" name="nombre" placeholder="Nombre...">
-                        <input type="text" name="apellidos" placeholder="Apellidos...">                  
-                        <input type="email" name="email" placeholder="Email...">
-                        <input type="tel" name="telefono" placeholder="Teléfono..." required>
-                    </fieldset>
+                <div id="datos-notas">
+                    <div class="datos">
+                        <fieldset>
+                            <legend>Datos Personales:</legend>
+                            <input type="text" name="nombre" placeholder="Nombre...">
+                            <input type="text" name="apellidos" placeholder="Apellidos...">                  
+                            <input type="email" name="email" placeholder="Email...">
+                            <input type="tel" name="telefono" placeholder="Teléfono..." required>
+                            <div id="div-titulo-sector">
+                                <div id="titulo-box">
+                                    <label for="Titulo">Título:</label>
+                                    <select name="Titulo" id="titulo">
+                                        <option value="" selected>No procede</option>
+                                        <option value="Arquitecto">Arquitecto</option>
+                                        <option value="IngCivil">Ing. Civil</option>
+                                        <option value="IngElectrico">Ing. Eléctrico</option>
+                                        <option value="IngMecanico">Ing. Mecánico</option>
+                                    </select>
+                                </div>
+                                <div id="sector-box">
+                                    <label for="sector">Sector:</label>
+                                    <select id="sector" name="sector">
+                                        <option value="" selected>No procede</option>
+                                        <option value="Aguas">Aguas</option>
+                                        <option value="Oil&Gas">Oil&Gas</option>
+                                        <option value="Renovables">Renovables</option>
+                                        <option value="Fotovoltaica">Fotovoltaica</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="div-notas">
+                        <fieldset>
+                            <legend>Notas:</legend>
+                            <textarea id="notas" name="notas" rows="16" placeholder="Escribe aquí tus comentarios"></textarea>
+                            <input type="submit" name="VerCV" value="Ver CV" >
+                        </fieldset>
+                    </div>
                 </div>
-                <div>
-                    <fieldset>
-                        <legend>Notas:</legend>
-                        <textarea id="notas" name="notas" rows="12" placeholder="Escribe aquí tus comentarios"></textarea>
-                    </fieldset>
-                </div>             
             </div>       
-            <div>
+            <div id="bloque-programas">
                 <fieldset>
                     <div class="seleccionar-especialidad">
                         <select name= "especialidad" class="especialidad">
@@ -50,7 +77,7 @@
                             <option value="industrial">Industrial</option>
                         </select>
                     </div>
-                    <!-- <div class="bloque-inicial">
+                    <div class="bloque-inicial">
                         <div class="especialidad inicial">
                             <div class="programa-row-left">
                                 <select name= "programas" class="programa" disabled>
@@ -107,7 +134,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="bloque-especialidad mecanica">
                         <div class="especialidad mecanica">
                             <div class="programa-row-left">
@@ -960,8 +987,9 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" name="enviaFormulario" value="Insertar">
                 </fieldset>
+                <br>
+                <input type="submit" name="enviaFormulario" value="Insertar">
             </div>
         </form>      
     </body>
