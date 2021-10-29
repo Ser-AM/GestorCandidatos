@@ -29,9 +29,16 @@
         </header>
         <?php
         
+            // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
+            error_reporting(E_ERROR | E_PARSE);
+
             // Variables que recibimos del formulario de insertarCandidato
-            $notas = $_POST['notas'];
             $especialidad = $_POST['especialidad'];
+            $software1 = $_POST['software1'];
+            $experiencia1 = $_POST['experiencia1'];
+            $software2 = $_POST['software2'];
+            $experiencia2 = $_POST['experiencia2'];
+            $notas = $_POST['notas'];
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -53,21 +60,26 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM CANDIDATOS WHERE ESPECIALIDAD LIKE '$especialidad' AND NOTAS LIKE '%$notas%'";
+            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE ESPECIALIDAD LIKE '%$especialidad%' AND SOFTWARE1 LIKE '%$software1%' AND EXPERIENCIA1 LIKE '%$experiencia1%' AND SOFTWARE2 LIKE '%$software2%' AND EXPERIENCIA2 LIKE '%$experiencia2%' AND NOTAS LIKE '%$notas%'";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
             if($resultados == false){
-                echo "Error al insertar el candidato " . mysqli_error($conexion);
+                echo "Error al encontrar los candidatos. " . mysqli_error($conexion);
             } else {
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
                 echo "<div class='resultadoCandidato'>";
                 echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'];
                 echo "<div class='contenedorResultado'>";
+                echo "<div class='softwareExperiencia'>";
+                echo "<p>Especialidad: ".$especialidad."</p><br>";
+                echo "<br><p>Software: ".$software1." nivel ".$experiencia1."</p>";
+                echo "<br><p>Software: ".$software2." nivel ".$experiencia2."</p>";
+                echo "</div>";
                 echo "<div><h5>Notas: </h5><p>  ". $fila['NOTAS'] ."</p> </div>";
-                echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
-                echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></div></form>";
+                echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
+                echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>";
                 echo "</div></div>";
                 }
             }

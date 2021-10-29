@@ -31,7 +31,7 @@
             </div>
         </header>
         <?php
-            // Turn off all error reporting
+            // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
             error_reporting(E_ERROR | E_PARSE);
             
             // Variables que recibimos del formulario de insertarCandidato
@@ -40,6 +40,8 @@
             $email = $_POST['email'];
             $telefono = $_POST['telefono'];
             $notas = $_POST['notas'];
+            $titulo = $_POST['titulo'];
+            $sector = $_POST['sector'];
             $especialidad = $_POST['especialidad'];
             $software1 = $_POST['software1'];
             $experiencia1 = $_POST['experiencia1'];
@@ -74,7 +76,7 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "INSERT INTO CANDIDATOS (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, ESPECIALIDAD, SOFTWARE1, EXPERIENCIA1, SOFTWARE2, EXPERIENCIA2, SOFTWARE3, EXPERIENCIA3, SOFTWARE4, EXPERIENCIA4, SOFTWARE5, EXPERIENCIA5, SOFTWARE6, EXPERIENCIA6) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$especialidad', '$programa1', '$experiencia1', '$programa2', '$experiencia2', '$programa3', '$experiencia3', '$programa4', '$experiencia4', '$programa5', '$experiencia5', '$programa6', '$experiencia6')";
+            $queryInsertarCandidato = "INSERT INTO `candidatos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, SOFTWARE1, EXPERIENCIA1, SOFTWARE2, EXPERIENCIA2, SOFTWARE3, EXPERIENCIA3, SOFTWARE4, EXPERIENCIA4, SOFTWARE5, EXPERIENCIA5, SOFTWARE6, EXPERIENCIA6) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$programa1', '$experiencia1', '$programa2', '$experiencia2', '$programa3', '$experiencia3', '$programa4', '$experiencia4', '$programa5', '$experiencia5', '$programa6', '$experiencia6')";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -91,6 +93,8 @@
                 echo $email . "<br>";
                 echo "Número de teléfono: " . $telefono . "<br>";
                 echo "<br>Especialidad: " . $especialidad . "<br>";
+                echo "Titulación: " . $titulo . "<br>";
+                echo "Sector: " . $sector;
                 echo "<br>Aplicaciones informáticas: <br>";
                 echo $software1 . "   nivel " . $experiencia1;
                 echo "<div class='contenedorResultado'>";

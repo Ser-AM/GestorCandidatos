@@ -193,3 +193,33 @@ input[type=submit]:hover {
     background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
 }
+
+div.especialidad{
+    display: block;
+}
+div.programa-row{
+    margin: 0px;
+    width: 100%;
+    padding: 0;
+}
+select.programa{
+    width: 60%;
+}  
+select.experiencia{
+    width: 40%;
+}
+optgroup[label="Mecánica"]{
+    background-color: #F4B084;
+}
+optgroup[label="Arquitectura"]{
+    background-color: #92D050;
+}
+optgroup[label="Obra Civil"]{
+    background-color: #9BC2E6;
+}
+optgroup[label="Industrial"]{
+    background-color: #FFD966;
+}
+option{
+    background-color: white;
+}

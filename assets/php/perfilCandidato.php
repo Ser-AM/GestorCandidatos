@@ -33,7 +33,9 @@
             </div>
         </header>
         <?php
-        
+            // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
+            error_reporting(E_ERROR | E_PARSE);
+
             // Variables que recibimos del formulario de insertarCandidato
             $telefono = $_POST['telefono'];
 
@@ -57,7 +59,7 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM CANDIDATOS WHERE TELEFONO = '$telefono'";
+            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE TELEFONO = '$telefono'";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -71,12 +73,14 @@
                 echo $fila['EMAIL'] . "<br>";
                 echo "Número de teléfono: " . $fila['TELEFONO'] . "<br>";
                 echo "<br>Especialidad: " . $fila['ESPECIALIDAD'] . "<br>";
+                echo "Titulación: " . $fila['TITULO'] . "<br>";
+                echo "Sector: " . $fila['SECTOR'];
                 echo "<br>Aplicaciones informáticas: <br>";
                 echo $fila['APP_1'] . "   nivel " . $fila['EXP_1'];
                 echo "<div class='contenedorResultado'>";
                 echo "<table><tr><td>Notas: </td><td>". $fila['NOTAS'] ."</td>";
                 echo "<td><div></div></td>";
-                echo "<td>Currículum => </td><td><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>CV ". $fila['NOMBRE']."</a></td></tr></table>";
+                echo "<td>Currículum => </td><td><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></td></tr></table>";
                 echo "";
                 echo "</div></div>";
                 }
