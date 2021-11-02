@@ -3,7 +3,6 @@ body{
 }
 header{
     width: 100%;
-    /*height: 100px;*/
 }
 select.especialidad{
     width: 100%;
@@ -37,7 +36,6 @@ nav{
     padding-bottom: 0px;
 }
 div{ 
-    /* border: 2px red solid;*/
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -60,6 +58,19 @@ div.especialidad{
     display: flex;
     padding: 0px;
     min-width: 30%;
+    margin:0;
+    width:100%;
+}
+div.especialidad.busqueda{
+    display: block;
+}
+div.programa-row.busqueda{
+    margin: 0px;
+    width: 100%;
+}
+select.experiencia.busqueda{
+    width: 40%;
+    margin-right: 0;;
 }
 div.ficha{
     min-width: 750px;
@@ -119,11 +130,13 @@ div.programa-row-left{
     margin-left: 0px;
     width: 50%;
     padding: 0;
+    justify-content: flex-start;
 }
 div.programa-row-right{
     margin-right: 0px;
     width: 50%;
     padding: 0;
+    justify-content: flex-end;
 }
 #div-titulo-sector{
     padding: 0px;
@@ -147,6 +160,7 @@ div.form-busqueda{
     margin: 0;
     display: block;
     padding-top: 0;
+    padding-bottom: 0px;;
 }
 button{
     transform: skewX(-32deg);
@@ -192,21 +206,6 @@ input[type=submit]{
 input[type=submit]:hover {
     background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
-}
-
-div.especialidad{
-    display: block;
-}
-div.programa-row{
-    margin: 0px;
-    width: 100%;
-    padding: 0;
-}
-select.programa{
-    width: 60%;
-}  
-select.experiencia{
-    width: 40%;
 }
 optgroup[label="Mecánica"]{
     background-color: #F4B084;
