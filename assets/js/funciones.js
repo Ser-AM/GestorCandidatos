@@ -8,14 +8,12 @@ $(document).ready(function() {
         $('.programa').prop('selectedIndex',0);
         $('.experiencia').prop('selectedIndex',0);
     });
-
-    $( '#titulo-checkbox' ).change(function() {
-        if( $(this).is(':checked') ){
-            // Hacer algo si el checkbox ha sido seleccionado
-            $(".input-radio").prop('disabled', false);
-        } else {
-            // Hacer algo si el checkbox ha sido deseleccionado
-            $(".input-radio").prop('disabled', true);
-        }
-    });
+    $("#buscar-por-datos").click(function() {
+        $("#busqueda-programas").hide();
+        $("#busqueda-datos").show();
+	});
+    $("#buscar-por-programas").click(function() {
+        $("#busqueda-datos").hide();
+        $("#busqueda-programas").show();
+	});
 });

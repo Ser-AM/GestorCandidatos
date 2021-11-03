@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="" />
-        <meta name="author" content="Ser-AM" />
         <title>Gestor de Candidatos</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/Gestor_Candidatos_Icon.png">
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="assets/js/jquery.min.js"></script>
     	<script src="assets/js/funciones.js"></script>
-        <style>
-            .resultadoCandidato{
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
     </head>
     <body>
-
         <header>
-            <div>
-                <button><a href="../../index.html">Añadir candidatos</a></button>
+            <div class="header">
+                <div id="logo">
+                    <img src="../images/Gestor_Candidatos.png" alt="">
+                </div>
+            </div>
+            <nav>
+                <button><a href="../../crearCandidato.html">Añadir candidato</a></button>
                 <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
-            </div>
-            <div>
-                <img src="assets/images/Gestor_Candidatos.png" alt="">
-            </div>
+            </nav>
         </header>
         <?php
         
@@ -33,12 +28,23 @@
             error_reporting(E_ERROR | E_PARSE);
 
             // Variables que recibimos del formulario de insertarCandidato
+            $nombre = $_POST['nombre'];
+            $apellidos = $_POST['apellidos'];
+            $email = $_POST['email'];
+            $telefono = $_POST['telefono'];
+
+            $titulo = $_POST['titulo'];
+            $sector = $_POST['sector'];
             $especialidad = $_POST['especialidad'];
             $software1 = $_POST['software1'];
-            $experiencia1 = $_POST['experiencia1'];
-            $software2 = $_POST['software2'];
-            $experiencia2 = $_POST['experiencia2'];
             $notas = $_POST['notas'];
+
+            // A la espera de ver la forma de buscar diferentes softwares y experiencias asociadas sin tener una query tan larga
+
+            /*$experiencia1 = $_POST['experiencia1'];
+            $software2 = $_POST['software2'];
+            $experiencia2 = $_POST['experiencia2'];*/
+            
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -60,7 +66,22 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE ESPECIALIDAD LIKE '%$especialidad%' AND SOFTWARE1 LIKE '%$software1%' AND EXPERIENCIA1 LIKE '%$experiencia1%' AND SOFTWARE2 LIKE '%$software2%' AND EXPERIENCIA2 LIKE '%$experiencia2%' AND NOTAS LIKE '%$notas%'";
+            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE 
+                NOMBRE LIKE '%$nombre%' AND
+                APELLIDOS LIKE '%$apellidos%' AND
+                EMAIL LIKE '%$email%' AND
+                TELEFONO LIKE '%$telefono%' AND
+                TITULO LIKE '%$titulo%' AND
+                SECTOR LIKE '%$sector%' AND
+                ESPECIALIDAD LIKE '%$especialidad%' AND
+                SOFTWARE1 LIKE '%$software1%' OR
+                SOFTWARE2 LIKE '%$software1%' OR 
+                SOFTWARE3 LIKE '%$software1%' OR
+                SOFTWARE4 LIKE '%$software1%' OR
+                SOFTWARE5 LIKE '%$software1%' OR
+                SOFTWARE6 LIKE '%$software1%' AND
+ 
+                NOTAS LIKE '%$notas%'";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -70,17 +91,26 @@
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
                 echo "<div class='resultadoCandidato'>";
-                echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'];
-                echo "<div class='contenedorResultado'>";
-                echo "<div class='softwareExperiencia'>";
-                echo "<p>Especialidad: ".$especialidad."</p><br>";
-                echo "<br><p>Software: ".$software1." nivel ".$experiencia1."</p>";
-                echo "<br><p>Software: ".$software2." nivel ".$experiencia2."</p>";
+                echo    "<div class='contenedorResultado'>";
+                echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
+                echo        "<p>".$fila['TELEFONO']."</p>";
+                echo        "<h3>Especialidad: ".$fila['ESPECIALIDAD']."</h3>";
+                echo        "<div class='softwareExperiencia'>";
+                echo            "<p>Software: ".$fila['SOFTWARE1']." nivel ".$fila['EXPERIENCIA1']."</p>";
+                echo            "<p>Software: ".$fila['SOFTWARE2']." nivel ".$fila['EXPERIENCIA2']."</p>";
+                echo        "</div>";
+                echo    "</div>";
+                echo    "<div class='contenedorResultado'>";
+                echo        "<div class='botones-candidato'>";
+                echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
+                echo        "<form id='form-fila-candidato' action='./perfilCandidato.php' method='post'><div id='boton-ver-perfil'><input type='submit' name='telefono' value='Ver Perfil'></input></div></form>"; 
+                echo        "</div>";
+                echo        "<div class='notas-candidato-resultado'>";
+                echo            "<h5>Notas: </h5>";
+                echo            "<p>  ". $fila['NOTAS'] ."</p>";
+                echo        "</div>";
+                echo    "</div>";
                 echo "</div>";
-                echo "<div><h5>Notas: </h5><p>  ". $fila['NOTAS'] ."</p> </div>";
-                echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
-                echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>";
-                echo "</div></div>";
                 }
             }
 

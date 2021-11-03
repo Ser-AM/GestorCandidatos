@@ -1,5 +1,6 @@
 body{
     background-color: grey;
+    min-width: 650px;
 }
 header{
     width: 100%;
@@ -35,6 +36,13 @@ nav{
     padding: 10px;
     padding-bottom: 0px;
 }
+.nav-busqueda{
+    width: 100%;
+    padding-top: 0px;
+    margin-left: 256px;
+}
+
+
 div{ 
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -141,7 +149,7 @@ div.programa-row-right{
 #div-titulo-sector{
     padding: 0px;
 }
-p{
+p#advertencia{
     color:red;
     font-size: large;
     text-decoration: underline;
@@ -168,6 +176,7 @@ button{
     background-color:#7892c2;
     padding: 5px;
     background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    width: 170px;
 }
 button:hover{
     background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);  
@@ -179,6 +188,9 @@ button a{
     font-size: 16px;
     
 }
+#buscar-por-programas{
+    width:180px;
+}
 input[type="text"], input[type="email"], input[type="tel"], select {
     display: block;
     width: 100%;
@@ -189,7 +201,7 @@ input[type="text"], input[type="email"], input[type="tel"], select {
     border-radius: 6px;
     box-sizing: border-box;
   }
-input[type=submit]{
+input[type=submit], button#boton-ver-perfil, button#boton-ver-cv{
     box-shadow: 0px 0px 0px 2px #9fb4f2;
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
 	border-radius:5px;
@@ -202,8 +214,9 @@ input[type=submit]{
 	text-shadow:0px 1px 0px #283966;
     width: 100%;
     height: 40px;
+    transform: skewX(0deg);
 }
-input[type=submit]:hover {
+input[type=submit]:hover , button#boton-ver-perfil:hover,  button#boton-ver-perfil:hover{
     background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
 }
@@ -221,4 +234,56 @@ optgroup[label="Industrial"]{
 }
 option{
     background-color: white;
+}
+div#cuadro-busquedas{
+    display: block;
+    padding-top: 30px;
+    margin-top: -30px;
+    padding-bottom: 0px;
+}
+#busqueda-programas{
+display:none;
+}
+.resultadoCandidato{
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.resultadoCandidato>div>h1{
+    margin-bottom: 0px;
+
+}
+.resultadoCandidato>div{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: block;
+}
+.resultadoCandidato>div>h3{
+    margin-bottom: 0px;
+    align-self: end;
+}
+.contenedorResultado{
+    padding: 0px;
+}
+div.softwareExperiencia{
+    display: block;
+    padding: 0px;
+}
+div.botones-candidato{
+    padding: 15px 0px 0px 0px;
+}
+div.notas-candidato-resultado{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+form#form-fila-candidato{
+    padding: 0px;
+    width: 50%;
+}
+div#boton-ver-perfil{
+    padding: 0px;
+}
+button#boton-ver-cv{
+    width: 50%;
 }
