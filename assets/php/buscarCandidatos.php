@@ -19,11 +19,11 @@
 
         <header>
             <div>
-                <button><a href="../../index.html">Añadir candidatos</a></button>
-                <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
+                <img src="../images/Gestor_Candidatos.png" alt="">
             </div>
             <div>
-                <img src="assets/images/Gestor_Candidatos.png" alt="">
+                <button><a href="../../crearCandidato.html">Añadir candidato</a></button>
+                <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
             </div>
         </header>
         <?php
@@ -32,12 +32,23 @@
             error_reporting(E_ERROR | E_PARSE);
 
             // Variables que recibimos del formulario de insertarCandidato
+            $nombre = $_POST['nombre'];
+            $apellidos = $_POST['apellidos'];
+            $email = $_POST['email'];
+            $telefono = $_POST['telefono'];
+
+            $titulo = $_POST['titulo'];
+            $sector = $_POST['sector'];
             $especialidad = $_POST['especialidad'];
             $software1 = $_POST['software1'];
-            $experiencia1 = $_POST['experiencia1'];
-            $software2 = $_POST['software2'];
-            $experiencia2 = $_POST['experiencia2'];
             $notas = $_POST['notas'];
+
+            // A la espera de ver la forma de buscar diferentes softwares y experiencias asociadas sin tener una query tan larga
+
+            /*$experiencia1 = $_POST['experiencia1'];
+            $software2 = $_POST['software2'];
+            $experiencia2 = $_POST['experiencia2'];*/
+            
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -59,7 +70,23 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE ESPECIALIDAD LIKE '%$especialidad%' AND SOFTWARE1 LIKE '%$software1%' AND EXPERIENCIA1 LIKE '%$experiencia1%' AND SOFTWARE2 LIKE '%$software2%' AND EXPERIENCIA2 LIKE '%$experiencia2%' AND NOTAS LIKE '%$notas%'";
+            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE 
+                NOMBRE LIKE '%$nombre%' AND
+                APELLIDOS LIKE '%$apellidos%' AND
+                EMAIL LIKE '%$email%' AND
+                TELEFONO LIKE '%$telefono%' AND
+                TITULO LIKE '%$titulo%' AND
+                SECTOR LIKE '%$sector%' AND
+                ESPECIALIDAD LIKE '%$especialidad%' AND
+
+                SOFTWARE1 LIKE '%$software1%' OR
+                SOFTWARE2 LIKE '%$software1%' OR 
+                SOFTWARE3 LIKE '%$software1%' OR
+                SOFTWARE4 LIKE '%$software1%' OR
+                SOFTWARE5 LIKE '%$software1%' OR
+                SOFTWARE6 LIKE '%$software1%' AND
+ 
+                NOTAS LIKE '%$notas%'";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -68,21 +95,26 @@
             } else {
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
-                echo "<div class='resultadoCandidato'>";
-                echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'];
-                echo "<div class='contenedorResultado'>";
-                echo "<div class='softwareExperiencia'>";
-                echo "<p>Especialidad: ".$fila['ESPECIALIDAD']."</p><br>";
-                echo "<br><p>Software: ".$fila['SOFTWARE1']." nivel ".$fila['EXPERIENCIA1']."</p>";
-                echo "<br><p>Software: ".$fila['SOFTWARE2']." nivel ".$fila['EXPERIENCIA2']."</p>";
-                echo "</div> <br>";
-                echo "<div><h5>Notas: </h5><p>  ". $fila['NOTAS'] ."</p> </div>";
-                echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
-                echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>";
-                echo "</div></div>";
+                    echo "<div class='resultadoCandidato'>";
+                    echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'];
+                    
+                    echo "<div class='contenedorResultado'>";
+                    echo "<div class='softwareExperiencia'>";
+                    echo "<p>Especialidad: ".$fila['ESPECIALIDAD']."</p><br>";
+                    echo "<br><p>Software: ".$fila['SOFTWARE1']." nivel ".$fila['EXPERIENCIA1']."</p>";
+                    echo "<br><p>Software: ".$fila['SOFTWARE2']." nivel ".$fila['EXPERIENCIA2']."</p>";
+                    echo "</div> <br>";
+                    
+                    echo "<div><h5>Notas: </h5><p>  ". $fila['NOTAS'] ."</p> </div>";
+                    echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
+                    
+                    echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>";
+                    echo "</div></div>";
+
+                } if(!mysqli_fetch_array($resultados, MYSQLI_ASSOC)){
+                    echo "<div><p>No existen más candidatos que cumplan los criterios de búsqueda</p></div>";
                 }
             }
-
             // Cerramos la conexión
             mysqli_close($conexion);
         ?>
