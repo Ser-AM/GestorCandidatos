@@ -69,14 +69,22 @@
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
                 echo "<div class='resultadoCandidato'>";
+                
                 echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'] . "<br>";
                 echo $fila['EMAIL'] . "<br>";
                 echo "Número de teléfono: " . $fila['TELEFONO'] . "<br>";
                 echo "<br>Especialidad: " . $fila['ESPECIALIDAD'] . "<br>";
                 echo "Titulación: " . $fila['TITULO'] . "<br>";
-                echo "Sector: " . $fila['SECTOR'];
+                echo "Sector: " . $fila['SECTOR'] . "<br>";
+
                 echo "<br>Aplicaciones informáticas: <br>";
-                echo $fila['APP_1'] . "   nivel " . $fila['EXP_1'];
+                echo " - " . $fila['SOFTWARE1'] . " nivel " . $fila['EXPERIENCIA1'] . "<br>";
+                echo " - " . $fila['SOFTWARE2'] . " nivel " . $fila['EXPERIENCIA2'] . "<br>";
+                echo " - " . $fila['SOFTWARE3'] . " nivel " . $fila['EXPERIENCIA3'] . "<br>";
+                echo " - " . $fila['SOFTWARE4'] . " nivel " . $fila['EXPERIENCIA4'] . "<br>";
+                echo " - " . $fila['SOFTWARE5'] . " nivel " . $fila['EXPERIENCIA5'] . "<br>";
+                echo " - " . $fila['SOFTWARE6'] . " nivel " . $fila['EXPERIENCIA6'] . "<br>";
+                
                 echo "<div class='contenedorResultado'>";
                 echo "<table><tr><td>Notas: </td><td>". $fila['NOTAS'] ."</td>";
                 echo "<td><div></div></td>";

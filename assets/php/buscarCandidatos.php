@@ -11,7 +11,6 @@
     	<script src="assets/js/funciones.js"></script>
         <style>
             .resultadoCandidato{
-                display: flex;
                 flex-direction: column;
             }
         </style>
@@ -73,10 +72,10 @@
                 echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'];
                 echo "<div class='contenedorResultado'>";
                 echo "<div class='softwareExperiencia'>";
-                echo "<p>Especialidad: ".$especialidad."</p><br>";
-                echo "<br><p>Software: ".$software1." nivel ".$experiencia1."</p>";
-                echo "<br><p>Software: ".$software2." nivel ".$experiencia2."</p>";
-                echo "</div>";
+                echo "<p>Especialidad: ".$fila['ESPECIALIDAD']."</p><br>";
+                echo "<br><p>Software: ".$fila['SOFTWARE1']." nivel ".$fila['EXPERIENCIA1']."</p>";
+                echo "<br><p>Software: ".$fila['SOFTWARE2']." nivel ".$fila['EXPERIENCIA2']."</p>";
+                echo "</div> <br>";
                 echo "<div><h5>Notas: </h5><p>  ". $fila['NOTAS'] ."</p> </div>";
                 echo "<div><h5>Currículum => </h5><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></div>";
                 echo "<form action='./perfilCandidato.php' method='post'><div><p>Ir al perfil completo</p><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>";

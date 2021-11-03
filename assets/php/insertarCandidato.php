@@ -14,10 +14,10 @@
                 align-items: center;
                 display: inline;
             }
-            .resultadoCandidato{
+            /*.resultadoCandidato{
                 display: flex;
                 flex-direction: column;
-            }
+            } */
         </style>
     </head>
     <body>
@@ -76,7 +76,7 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "INSERT INTO `candidatos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, SOFTWARE1, EXPERIENCIA1, SOFTWARE2, EXPERIENCIA2, SOFTWARE3, EXPERIENCIA3, SOFTWARE4, EXPERIENCIA4, SOFTWARE5, EXPERIENCIA5, SOFTWARE6, EXPERIENCIA6) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$programa1', '$experiencia1', '$programa2', '$experiencia2', '$programa3', '$experiencia3', '$programa4', '$experiencia4', '$programa5', '$experiencia5', '$programa6', '$experiencia6')";
+            $queryInsertarCandidato = "INSERT INTO `candidatos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, SOFTWARE1, EXPERIENCIA1, SOFTWARE2, EXPERIENCIA2, SOFTWARE3, EXPERIENCIA3, SOFTWARE4, EXPERIENCIA4, SOFTWARE5, EXPERIENCIA5, SOFTWARE6, EXPERIENCIA6) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$software1', '$experiencia1', '$software2', '$experiencia2', '$software3', '$experiencia3', '$software4', '$experiencia4', '$software5', '$experiencia5', '$software6', '$experiencia6')";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -88,15 +88,21 @@
             }else if($resultados == false){
                 echo "<div>Error al insertar el candidato: " . mysqli_error($conexion) . " </div>";
             } else {
-                echo "<div class='resultadoCandidato'>";
+                echo "<div id='resultadoCandidato'>";
                 echo "<h4>Candidato: </h4>" . $nombre . " " . $apellidos . "<br>";
                 echo $email . "<br>";
                 echo "Número de teléfono: " . $telefono . "<br>";
                 echo "<br>Especialidad: " . $especialidad . "<br>";
                 echo "Titulación: " . $titulo . "<br>";
-                echo "Sector: " . $sector;
+                echo "Sector: " . $sector . "<br>";
+                
                 echo "<br>Aplicaciones informáticas: <br>";
-                echo $software1 . "   nivel " . $experiencia1;
+                echo " - " . $software1 . "   nivel " . $experiencia1;
+                echo "<br> - " . $software2 . " nivel " . $experiencia2;
+                echo "<br> - " . $software3 . " nivel " . $experiencia3;
+                echo "<br> - " . $software4 . " nivel " . $experiencia4;
+                echo "<br> - " . $software5 . " nivel " . $experiencia5;
+                
                 echo "<div class='contenedorResultado'>";
                 echo "<table><tr><td>Notas: </td><td>". $notas ."</td>";
                 echo "<td><div></div></td>";
