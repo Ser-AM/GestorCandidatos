@@ -12,10 +12,8 @@
     </head>
     <body>
         <header>
-            <div class="header">
-                <div id="logo">
-                    <img src="../images/Gestor_Candidatos.png" alt="">
-                </div>
+            <div>
+                <img src="../images/Gestor_Candidatos.png" alt="">
             </div>
             <nav>
                 <button><a href="../../crearCandidato.html">Añadir candidato</a></button>
@@ -113,7 +111,6 @@
                 echo "</div>";
                 }
             }
-
             // Cerramos la conexión
             mysqli_close($conexion);
         ?>
