@@ -21,7 +21,6 @@
             </nav>
         </header>
         <?php
-        
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
             error_reporting(E_ERROR | E_PARSE);
 
