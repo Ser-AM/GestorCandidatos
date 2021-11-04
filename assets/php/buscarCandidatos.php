@@ -71,12 +71,12 @@
                 TITULO LIKE '%$titulo%' AND
                 SECTOR LIKE '%$sector%' AND
                 ESPECIALIDAD LIKE '%$especialidad%' AND
-                SOFTWARE1 LIKE '%$software1%' OR
+                SOFTWARE1 LIKE '%$software1%'/* OR
                 SOFTWARE2 LIKE '%$software1%' OR 
                 SOFTWARE3 LIKE '%$software1%' OR
                 SOFTWARE4 LIKE '%$software1%' OR
                 SOFTWARE5 LIKE '%$software1%' OR
-                SOFTWARE6 LIKE '%$software1%' AND
+                SOFTWARE6 LIKE '%$software1%' */ AND
  
                 NOTAS LIKE '%$notas%'";
 
@@ -100,7 +100,7 @@
                 echo    "<div class='contenedorResultado'>";
                 echo        "<div class='botones-candidato'>";
                 echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
-                echo        "<form id='form-fila-candidato' action='./perfilCandidato.php' method='post'><div id='boton-ver-perfil'><input type='submit' name='telefono' value='Ver Perfil'></input></div></form>"; 
+                echo        "<form id='form-fila-candidato' action='./perfilCandidato.php' method='post'><div id='boton-ver-perfil'><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>"; 
                 echo        "</div>";
                 echo        "<div class='notas-candidato-resultado'>";
                 echo            "<h5>Notas: </h5>";
