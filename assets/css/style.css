@@ -39,10 +39,14 @@ nav{
 .nav-busqueda{
     width: 100%;
     padding-top: 0px;
+    margin-top: -30px;
     margin-left: 256px;
 }
-
-
+#nav-editar-perfil{
+    width: 100%;
+    padding-top: 0px;
+    margin-left: 600px;
+}
 div{ 
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -108,7 +112,6 @@ div#datos-inf{
 #bloque-programas{
     display: block;
 }
-
 div.datos{
     width: 50%;
     display: flex;
@@ -186,7 +189,28 @@ button a{
     text-shadow:0px 1px 0px #283966;
     color:#ffffff;
     font-size: 16px;
-    
+}
+#editar-perfil{
+    border:1px solid #964e4e;
+    background-color:#c27878;
+    background:linear-gradient(to bottom, #c27878 5%, #9e4747 100%);
+}
+#editar-perfil:hover{
+    background:linear-gradient(to bottom, #9e4747 5%, #c27878 100%);  
+}
+#editar-perfil a{
+    text-shadow:0px 1px 0px #662828;
+}
+#eliminar-perfil{
+    border:1px solid #854e96;
+    background-color:#b378c2;
+    background:linear-gradient(to bottom, #b378c2 5%, #8a479e 100%);
+}
+#eliminar-perfil:hover{
+    background:linear-gradient(to bottom, #8d479e 5%, #b178c2 100%);  
+}
+#eliminar-perfil a{
+    text-shadow:0px 1px 0px #662828; 
 }
 #buscar-por-programas{
     width:180px;
@@ -283,7 +307,4 @@ form#form-fila-candidato{
 }
 div#boton-ver-perfil{
     padding: 0px;
-}
-button#boton-ver-cv{
-    width: 50%;
 }

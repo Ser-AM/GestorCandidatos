@@ -6,30 +6,20 @@
         <meta name="description" content="" />
         <title>Gestor de Candidatos</title>
         <link rel="stylesheet" href="../css/style.css"/>
-        <script src="assets/js/jquery.min.js"></script>
-    	<script src="assets/js/funciones.js"></script>
-        <style>
-            .resultadoCandidato{
-                display: flex;
-                flex-direction: column;
-            }
-            .resultadoCandidato p{
-                display: inline-block;
-                vertical-align: middle;
-                line-height: normal;
-            }
-        </style>
+        <script src="../js/jquery.min.js"></script>
+    	<script src="../js/funciones.js"></script>
     </head>
     <body>
-
-        <header>
-            <div>
-                <button><a href="../../index.html">Añadir candidatos</a></button>
+    <header>
+            <div class="header">
+                <div id="logo">
+                    <img src="../images/Gestor_Candidatos.png" alt="">
+                </div>
+            </div>
+            <nav>
+                <button><a href="../../crearCandidato.php">Añadir candidato</a></button>
                 <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
-            </div>
-            <div>
-                <img src="assets/images/Gestor_Candidatos.png" alt="">
-            </div>
+            </nav>
         </header>
         <?php
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
@@ -67,26 +57,150 @@
             } else {
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
-                echo "<div class='resultadoCandidato'>";
-                echo "<h4>Candidato: </h4>" . $fila['NOMBRE'] . " " . $fila['APELLIDOS'] . "<br>";
-                echo $fila['EMAIL'] . "<br>";
-                echo "Número de teléfono: " . $fila['TELEFONO'] . "<br>";
-                echo "<br>Especialidad: " . $fila['ESPECIALIDAD'] . "<br>";
-                echo "Titulación: " . $fila['TITULO'] . "<br>";
-                echo "Sector: " . $fila['SECTOR'];
-                echo "<br>Aplicaciones informáticas: <br>";
-                echo $fila['APP_1'] . "   nivel " . $fila['EXP_1'];
-                echo "<div class='contenedorResultado'>";
-                echo "<table><tr><td>Notas: </td><td>". $fila['NOTAS'] ."</td>";
-                echo "<td><div></div></td>";
-                echo "<td>Currículum => </td><td><a href='../../cvs/CV".$fila['TELEFONO'].".pdf' target='_blank'>CV ". $fila['NOMBRE']."</a></td></tr></table>";
-                echo "";
-                echo "</div></div>";
+                echo"
+                    <nav class='nav-busqueda' id='nav-editar-perfil'>
+                        <button id='editar-perfil'><a href='#'>Editar Perfil</a></button>
+                        <button id='eliminar-perfil'><a href='#'>Eliminar Perfil</a></button>
+                    </nav>
+                    <form action='assets/php/insertarCandidato.php' method='post'>
+                        <div class='ficha ver-perfil'>
+                            <div id='datos-notas'>
+                                <div class='datos'>
+                                    <fieldset>
+                                        <legend>Datos Personales:</legend>
+                                        <input type='text' name='nombre' value='".$fila['NOMBRE']."' disabled placeholder='Nombre...'>
+                                        <input type='text' name='apellidos' value='".$fila['APELLIDOS']."' disabled placeholder='Apellidos...'>                  
+                                        <input type='email' name='email'value='".$fila['EMAIL']."' disabled  placeholder='Email...'>
+                                        <input type='tel' name='telefono' value='".$fila['TELEFONO']."' disabled placeholder='Teléfono...' required>
+                                        <div id='div-titulo-sector'>
+                                            <div id='titulo-box'>
+                                                <label for='Titulo'>Título:</label>
+                                                <select name='titulo' id='titulo' disabled>
+                                                    <option value='".$fila['TITULO']."' selected>".$fila['TITULO']."</option>
+                                                    <option value='Arquitecto'>Arquitecto</option>
+                                                    <option value='IngenieroCivil'>Ing. Civil</option>
+                                                    <option value='IngenieroElectrico'>Ing. Eléctrico</option>
+                                                    <option value='IngenieroMecanico'>Ing. Mecánico</option>
+                                                </select>
+                                            </div>
+                                            <div id='sector-box'>
+                                                <label for='sector'>Sector:</label>
+                                                <select id='sector' name='sector' disabled>
+                                                    <option value='".$fila['SECTOR']."' selected>".$fila['SECTOR']."</option>
+                                                    <option value='Aguas'>Aguas</option>
+                                                    <option value='Oil&Gas'>Oil&Gas</option>
+                                                    <option value='Renovables'>Renovables</option>
+                                                    <option value='Fotovoltaica'>Fotovoltaica</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class='div-notas'>
+                                    <fieldset>
+                                        <legend>Notas:</legend>
+                                        <textarea id='notas' name='notas' rows='16' placeholder='Escribe aquí tus comentarios' disabled>".$fila['NOTAS']."</textarea>
+                                        <button id='boton-ver-cv' type='submit' formaction='../../cvs/CV".$fila['TELEFONO'].".pdf' formtarget='_blank'>Ver CV</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>     
+                        <div id='bloque-programas'>
+                            <fieldset>
+                                <div class='seleccionar-especialidad'>
+                                    <select name= 'especialidad' class='especialidad' disabled>
+                                        <option value='".$fila['ESPECIALIDAD']."' selected disabled hidden>".$fila['ESPECIALIDAD']."</option>
+                                        <option value='mecanica'>Mecánica</option>
+                                        <option value='arquitectura'>Arquitectura</option>
+                                        <option value='obra-civil'>Obra Civil</option>
+                                        <option value='industrial'>Industrial</option>
+                                        <option value='otros'>Otros</option>
+                                    </select>
+                                </div>
+                                
+                                    <div class='especialidad'>
+                                        <div class='programa-row-left'>
+                                            <select name= 'software1' class='programa general' disabled>
+                                                <option value='".$fila['software1']."' selected disabled hidden>".$fila['software1']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                   </select>
+                                            <select name= 'experiencia1' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_1']."' selected disabled hidden>".$fila['EXP_1']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                        <div class='programa-row-right'>
+                                            <select name= 'software2' class='programa general' disabled>
+                                                <option value='".$fila['APP_2']."' selected disabled hidden>".$fila['APP_2']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                   </select>
+                                            <select name= 'experiencia2' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_2']."' selected disabled hidden>".$fila['EXP_2']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                    </div>
+                                    <div class='especialidad'>
+                                        <div class='programa-row-left'>
+                                            <select name= 'software3' class='programa general' disabled>
+                                                <option value='".$fila['APP_3']."' selected disabled hidden>".$fila['APP_3']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                   </select>
+                                            <select name= 'experiencia3' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_3']."' selected disabled hidden>".$fila['EXP_3']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                        <div class='programa-row-right'>
+                                            <select name= 'software4' class='programa general' disabled>
+                                                <option value='".$fila['APP_4']."' selected disabled hidden>".$fila['APP_4']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                        </select>
+                                            <select name= 'experiencia4' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_4']."' selected disabled hidden>".$fila['EXP_4']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                    </div>
+                                    <div class='especialidad'>
+                                        <div class='programa-row-left'>
+                                            <select name= 'software5' class='programa general' disabled>
+                                                <option value='".$fila['APP_5']."' selected disabled hidden>".$fila['APP_5']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                        </select>
+                                            <select name= 'experiencia5' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_5']."' selected disabled hidden>".$fila['EXP_5']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                        <div class='programa-row-right'>
+                                            <select name= 'software6' class='programa general' disabled>
+                                                <option value='".$fila['APP_6']."' selected disabled hidden>".$fila['APP_6']."</option>";
+                                                require 'partials/options-softwares.php';
+                    echo"                        </select>
+                                            <select name= 'experiencia6' class='experiencia' disabled>
+                                                <option value='".$fila['EXP_6']."' selected disabled hidden>".$fila['EXP_6']."</option>";
+                                                require 'partials/options-exp.php';
+                    echo"                   </select>
+                                        </div>
+                                    </div>
+                                
+                            </fieldset>
+                            <br>
+                            <input type='submit' name='enviaFormulario' value='Insertar'>
+                        </div>
+                    </form>
+                " ;
                 }
             }
 
             // Cerramos la conexión
             mysqli_close($conexion);
-        ?>
+            ?>
     </body>
 </html>
+
+<!--CREAR EXCEPCION AL ERROR DE QUE EL NUMERO YA EXISTE PARA PODER GUARDAR LOS DATOS EDITADOS-->
+<!--QUE LA EXCEPCION PERMITA PONER EL MISMO QUE YA ESTABA, O UNO NUEVO, PERO NO UNO QUE YA EXISTE EN LA BASE DE DATOS Y NO ES EL SUYO-->
+<!--AGREGAR SENTENCIA QUE PERMITA ELIMINAR UN PERFIL-->
+<!--ENLAZAR EL SUBMIT DESDE AQUI A QUE SE ENVIE CORRECTAMENTE EL FORMULARIO, ACTUALMENTE SALTA ERROR -->
