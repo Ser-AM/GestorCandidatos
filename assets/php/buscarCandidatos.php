@@ -16,7 +16,7 @@
                 <img src="../images/Gestor_Candidatos.png" alt="">
             </div>
             <nav>
-                <button><a href="../../crearCandidato.html">Añadir candidato</a></button>
+                <button><a href="../../crearCandidato.php">Añadir candidato</a></button>
                 <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
             </nav>
         </header>

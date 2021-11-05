@@ -22,7 +22,7 @@
     <body>
         <header>
             <div>
-                <button><a href="../../index.html">Añadir candidatos</a></button>
+                <button><a href="../../crearCandidato.php">Añadir candidatos</a></button>
                 <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
             </div>
             <div>
