@@ -34,6 +34,7 @@
             $sector = $_POST['sector'];
             $especialidad = $_POST['especialidad'];
             $software1 = $_POST['software1'];
+            $experiencia1 = $_POST['experiencia1'];
             $notas = $_POST['notas'];
 
             // A la espera de ver la forma de buscar diferentes softwares y experiencias asociadas sin tener una query tan larga
@@ -63,38 +64,46 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE 
+            $queryBuscarDatosCandidato = "SELECT * FROM `datos` WHERE 
                 NOMBRE LIKE '%$nombre%' AND
                 APELLIDOS LIKE '%$apellidos%' AND
                 EMAIL LIKE '%$email%' AND
-                TELEFONO LIKE '%$telefono%' AND
-                TITULO LIKE '%$titulo%' AND
-                SECTOR LIKE '%$sector%' AND
+                TELEFONO LIKE '%$telefono%' AND 
+                NOTAS LIKE '%$notas%' AND
                 ESPECIALIDAD LIKE '%$especialidad%' AND
-                SOFTWARE1 LIKE '%$software1%'/* OR
-                SOFTWARE2 LIKE '%$software1%' OR 
-                SOFTWARE3 LIKE '%$software1%' OR
-                SOFTWARE4 LIKE '%$software1%' OR
-                SOFTWARE5 LIKE '%$software1%' OR
-                SOFTWARE6 LIKE '%$software1%' */ AND
- 
-                NOTAS LIKE '%$notas%'";
+                TITULO LIKE '%$titulo%' AND
+                SECTOR LIKE '%$sector%'";
 
-            $resultados = mysqli_query($conexion, $queryInsertarCandidato);
+            $queryBuscarSoftwareCandidato = "SELECT * FROM `softwares` WHERE
+                TELEFONO LIKE '%$telefono%' AND
+                SOFTWARE LIKE '%$software1%'";
 
-            if($resultados == false){
+            
+            $resultadosDatos = mysqli_query($conexion, $queryBuscarDatosCandidato);
+            $resultadosSoftware = mysqli_query($conexion, $queryBuscarSoftwareCandidato);
+
+            if($resultadosDatos == false){
                 echo "Error al encontrar los candidatos. " . mysqli_error($conexion);
             } else {
-                while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
-
+                // div contenedor
+                while(($fila = mysqli_fetch_array($resultadosDatos, MYSQLI_ASSOC))){
                 echo "<div class='resultadoCandidato'>";
                 echo    "<div class='contenedorResultado'>";
                 echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
                 echo        "<p>".$fila['TELEFONO']."</p>";
                 echo        "<h3>Especialidad: ".$fila['ESPECIALIDAD']."</h3>";
                 echo        "<div class='softwareExperiencia'>";
-                echo            "<p>Software: ".$fila['SOFTWARE1']." nivel ".$fila['EXPERIENCIA1']."</p>";
-                echo            "<p>Software: ".$fila['SOFTWARE2']." nivel ".$fila['EXPERIENCIA2']."</p>";
+                
+
+                // NO FUNCIONA BIEN ASÍ. SE INSERTAN EN EL PRIMER CANDIDATO QUE APAREZCA TODOS LOS SOFTWARES QUE ENCUENTRA
+                if($resultadosSoftware == false){
+                    echo "No se han encontrado softwares para este candidato";
+                }else{
+                    while(($fila2 = mysqli_fetch_array($resultadosSoftware, MYSQLI_ASSOC))){
+                    echo            "<p>Software: ".$fila2['SOFTWARE']." nivel ".$fila2['EXPERIENCIA']."</p>";
+                    }
+                }
+
                 echo        "</div>";
                 echo    "</div>";
                 echo    "<div class='contenedorResultado'>";
