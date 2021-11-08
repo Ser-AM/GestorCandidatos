@@ -127,17 +127,17 @@
                                                 require 'partials/options-softwares.php';
                     echo"                   </select>
                                             <select name= 'experiencia1' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_1']."' selected disabled hidden>".$fila['EXP_1']."</option>";
+                                                <option value='".$fila['experiencia1']."' selected disabled hidden>".$fila['experiencia1']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
                                         <div class='programa-row-right'>
                                             <select name= 'software2' class='programa general' disabled>
-                                                <option value='".$fila['APP_2']."' selected disabled hidden>".$fila['APP_2']."</option>";
+                                                <option value='".$fila['software2']."' selected disabled hidden>".$fila['software2']."</option>";
                                                 require 'partials/options-softwares.php';
                     echo"                   </select>
                                             <select name= 'experiencia2' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_2']."' selected disabled hidden>".$fila['EXP_2']."</option>";
+                                                <option value='".$fila['experiencia2']."' selected disabled hidden>".$fila['experiencia2']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
@@ -145,21 +145,21 @@
                                     <div class='especialidad'>
                                         <div class='programa-row-left'>
                                             <select name= 'software3' class='programa general' disabled>
-                                                <option value='".$fila['APP_3']."' selected disabled hidden>".$fila['APP_3']."</option>";
+                                                <option value='".$fila['software3']."' selected disabled hidden>".$fila['software3']."</option>";
                                                 require 'partials/options-softwares.php';
                     echo"                   </select>
                                             <select name= 'experiencia3' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_3']."' selected disabled hidden>".$fila['EXP_3']."</option>";
+                                                <option value='".$fila['experiencia3']."' selected disabled hidden>".$fila['experiencia3']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
                                         <div class='programa-row-right'>
                                             <select name= 'software4' class='programa general' disabled>
-                                                <option value='".$fila['APP_4']."' selected disabled hidden>".$fila['APP_4']."</option>";
+                                                <option value='".$fila['software4']."' selected disabled hidden>".$fila['software4']."</option>";
                                                 require 'partials/options-softwares.php';
                     echo"                        </select>
                                             <select name= 'experiencia4' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_4']."' selected disabled hidden>".$fila['EXP_4']."</option>";
+                                                <option value='".$fila['experiencia4']."' selected disabled hidden>".$fila['experiencia4']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
@@ -167,21 +167,21 @@
                                     <div class='especialidad'>
                                         <div class='programa-row-left'>
                                             <select name= 'software5' class='programa general' disabled>
-                                                <option value='".$fila['APP_5']."' selected disabled hidden>".$fila['APP_5']."</option>";
+                                                <option value='".$fila['software5']."' selected disabled hidden>".$fila['software5']."</option>";
                                                 require 'partials/options-softwares.php';
                     echo"                        </select>
                                             <select name= 'experiencia5' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_5']."' selected disabled hidden>".$fila['EXP_5']."</option>";
+                                                <option value='".$fila['experiencia5']."' selected disabled hidden>".$fila['experiencia5']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
                                         <div class='programa-row-right'>
                                             <select name= 'software6' class='programa general' disabled>
-                                                <option value='".$fila['APP_6']."' selected disabled hidden>".$fila['APP_6']."</option>";
+                                                <option value='".$fila['software6']."' selected disabled hidden>".$fila['software6']."</option>";
                                                 require 'partials/options-softwares.php';
                     echo"                        </select>
                                             <select name= 'experiencia6' class='experiencia' disabled>
-                                                <option value='".$fila['EXP_6']."' selected disabled hidden>".$fila['EXP_6']."</option>";
+                                                <option value='".$fila['experiencia6']."' selected disabled hidden>".$fila['experiencia6']."</option>";
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>

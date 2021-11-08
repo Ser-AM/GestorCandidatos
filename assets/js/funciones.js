@@ -9,11 +9,11 @@ $(document).ready(function() {
         $('.experiencia').prop('selectedIndex',0);
     });*/
 
-    $("#editar-perfil").click(function(){
+    /*$("#editar-perfil").click(function(){
         $("select").prop("disabled", false);
         $("input").prop("disabled", false);
         $("textarea").prop("disabled", false);
-    });
+    });*/
     $("#buscar-por-datos").click(function() {
         $("#busqueda-programas").hide();
         $("#busqueda-datos").show();
