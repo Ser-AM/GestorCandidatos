@@ -121,6 +121,8 @@
             }
             // Cerramos la conexión
             mysqli_close($conexion);
+
+            //
         ?>
     </body>
 </html>
