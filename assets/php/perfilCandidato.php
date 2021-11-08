@@ -25,8 +25,8 @@
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
             error_reporting(E_ERROR | E_PARSE);
 
-            // Variables que recibimos del formulario de insertarCandidato
-            $telefono = $_POST['telefono'];
+            //Variable que recibimos de buscarCandidatos
+            $telefono = $_GET['telefono'];
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -48,7 +48,7 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM `candidatos` WHERE TELEFONO = '$telefono'";
+            $queryInsertarCandidato = "SELECT * FROM `datos` WHERE TELEFONO = '$telefono'";
 
             $resultados = mysqli_query($conexion, $queryInsertarCandidato);
 
@@ -57,9 +57,11 @@
             } else {
                 while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
 
+                    $telefonoCandidato = $fila['TELEFONO'];
+
                 echo"
                     <nav class='nav-busqueda' id='nav-editar-perfil'>
-                        <button id='editar-perfil'><a href='#'>Editar Perfil</a></button>
+                        <button id='editar-perfil'><a href='modificarCandidatos.php?tln=$telefonoCandidato'>Editar Perfil</a></button>
                         <button id='eliminar-perfil'><a href='#'>Eliminar Perfil</a></button>
                     </nav>
                     <form action='assets/php/insertarCandidato.php' method='post'>
@@ -201,6 +203,5 @@
 </html>
 
 <!--CREAR EXCEPCION AL ERROR DE QUE EL NUMERO YA EXISTE PARA PODER GUARDAR LOS DATOS EDITADOS-->
-<!--QUE LA EXCEPCION PERMITA PONER EL MISMO QUE YA ESTABA, O UNO NUEVO, PERO NO UNO QUE YA EXISTE EN LA BASE DE DATOS Y NO ES EL SUYO-->
 <!--AGREGAR SENTENCIA QUE PERMITA ELIMINAR UN PERFIL-->
 <!--ENLAZAR EL SUBMIT DESDE AQUI A QUE SE ENVIE CORRECTAMENTE EL FORMULARIO, ACTUALMENTE SALTA ERROR -->

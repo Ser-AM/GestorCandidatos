@@ -87,6 +87,9 @@
             } else {
                 // div contenedor
                 while(($fila = mysqli_fetch_array($resultadosDatos, MYSQLI_ASSOC))){
+
+                    $telefonoCandidato = $fila['TELEFONO'];
+
                 echo "<div class='resultadoCandidato'>";
                 echo    "<div class='contenedorResultado'>";
                 echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
@@ -109,7 +112,7 @@
                 echo    "<div class='contenedorResultado'>";
                 echo        "<div class='botones-candidato'>";
                 echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
-                echo        "<form id='form-fila-candidato' action='./perfilCandidato.php' method='post'><div id='boton-ver-perfil'><input type='submit' name='telefono' value='".$fila['TELEFONO']."'></input></div></form>"; 
+                echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?telefono=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
                 echo        "</div>";
                 echo        "<div class='notas-candidato-resultado'>";
                 echo            "<h5>Notas: </h5>";
