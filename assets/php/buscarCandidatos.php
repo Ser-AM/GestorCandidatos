@@ -112,7 +112,7 @@
                 echo    "<div class='contenedorResultado'>";
                 echo        "<div class='botones-candidato'>";
                 echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
-                echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?telefono=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
+                echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
                 echo        "</div>";
                 echo        "<div class='notas-candidato-resultado'>";
                 echo            "<h5>Notas: </h5>";
