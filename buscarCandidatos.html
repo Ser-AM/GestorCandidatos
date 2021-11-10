@@ -28,7 +28,7 @@
         </nav>
         <div id="cuadro-busquedas">
             <div id="busqueda-datos"> <!--Buscar candidatos en la BBDD introduciendo datos personales-->
-                <form id="form-busqueda" action="assets/php/buscarCandidatos.php" method="post">
+                <form id="form-busqueda" action="assets/php/buscarDatosCandidatos.php" method="post">
                     <div id="area-busqueda">
                         <div class="form-busqueda">
                             <input type="text" name="nombre" placeholder="Nombre...">
@@ -46,7 +46,7 @@
                 </form>
             </div>
             <div id="busqueda-programas"> <!--Buscar candidatos en la BBDD introduciendo programas y experiencia-->
-                <form id="form-busqueda" action="assets/php/buscarCandidatos.php" method="post">
+                <form id="form-busqueda" action="assets/php/buscarSoftwareCandidatos.php" method="post">
                     <div id="area-busqueda">
                         <div class="form-busqueda">
                             <select name= "especialidad" class="especialidad-busqueda">
@@ -61,7 +61,7 @@
                                 <div id="titulo-box">
                                     <label for="Titulo">Título:</label>
                                     <select name="titulo" id="titulo">
-                                        <option value="" selected>No procede</option>
+                                        <option selected>No procede</option>
                                         <option value="Arquitecto">Arquitecto</option>
                                         <option value="IngenieroCivil">Ing. Civil</option>
                                         <option value="IngenieroElectrico">Ing. Eléctrico</option>
@@ -71,7 +71,7 @@
                                 <div id="sector-box">
                                     <label for="sector">Sector:</label>
                                     <select id="sector" name="sector">
-                                        <option value="" selected>No procede</option>
+                                        <option selected>No procede</option>
                                         <option value="Aguas">Aguas</option>
                                         <option value="Oil&Gas">Oil&Gas</option>
                                         <option value="Renovables">Renovables</option>
@@ -84,7 +84,7 @@
                             <div class="especialidad busqueda general">
                                 <div class="programa-row busqueda">
                                     <select name= "software1" class="programa general">
-                                        <option value="" selected disabled hidden>Programa general</option>
+                                        <option  selected disabled hidden>Programa general</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
                                         <option value="SOLIDEDGE">SOLIDEDGE</option>
