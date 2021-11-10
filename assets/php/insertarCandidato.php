@@ -75,10 +75,22 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "INSERT INTO `candidatos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, SOFTWARE1, EXPERIENCIA1, SOFTWARE2, EXPERIENCIA2, SOFTWARE3, EXPERIENCIA3, SOFTWARE4, EXPERIENCIA4, SOFTWARE5, EXPERIENCIA5, SOFTWARE6, EXPERIENCIA6) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$programa1', '$experiencia1', '$programa2', '$experiencia2', '$programa3', '$experiencia3', '$programa4', '$experiencia4', '$programa5', '$experiencia5', '$programa6', '$experiencia6')";
-
-            $resultados = mysqli_query($conexion, $queryInsertarCandidato);
-
+            $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad')";
+            $queryInsertarSoftware1 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1')";
+            $queryInsertarSoftware2 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2')";
+            $queryInsertarSoftware3 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3')";
+            $queryInsertarSoftware4 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software4', '$experiencia4')";
+            $queryInsertarSoftware5 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software5', '$experiencia5')";
+            $queryInsertarSoftware6 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software6', '$experiencia6')";
+            
+            $resultados  = mysqli_query($conexion, $queryInsertarDatos);
+            mysqli_query($conexion, $queryInsertarSoftware1);
+            mysqli_query($conexion, $queryInsertarSoftware2);
+            mysqli_query($conexion, $queryInsertarSoftware3);
+            mysqli_query($conexion, $queryInsertarSoftware4);
+            mysqli_query($conexion, $queryInsertarSoftware5);
+            mysqli_query($conexion, $queryInsertarSoftware6);
+            
             // Turn off all error reporting
             error_reporting(E_ERROR | E_PARSE);
 

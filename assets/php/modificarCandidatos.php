@@ -52,14 +52,21 @@
             mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
-            $queryInsertarCandidato = "SELECT * FROM `datos` WHERE TELEFONO = '$telefono';
-            SELECT * FROM `softwares` WHERE TELEFONO = '$telefono'";
+            $queryDatos = "SELECT * FROM `datos` WHERE TELEFONO = '$telefono'";
+            $querySoftwares="SELECT * FROM `softwares` WHERE TELEFONO = '$telefono'";
 
+            $resultadoDatos = mysqli_query($conexion, $queryDatos);
+            $resultadoSoftware = mysqli_query($conexion, $querySoftwares);
 
+            while(($fila = mysqli_fetch_array($resultadoSoftware, MYSQLI_ASSOC))){
+                for($i = 0; $i < sizeof($resultadoSoftware);$i++){
+                $software.$i = $fila['SOFTWARE'];
+                }
+            };
             if($resultados == false){
                 echo "Error al insertar el candidato " . mysqli_error($conexion);
             } else {
-                while(($fila = mysqli_fetch_array($resultados, MYSQLI_ASSOC))){
+                while(($fila = mysqli_fetch_array($resultadoDatos, MYSQLI_ASSOC))){
 
                     $telefonoCandidato = $fila['TELEFONO'];
                     echo"
