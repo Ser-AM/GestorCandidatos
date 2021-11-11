@@ -22,24 +22,17 @@
         </header>
         <?php
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
-            error_reporting(E_ERROR | E_PARSE);
+            //error_reporting(E_ERROR | E_PARSE);
 
             // Variables que recibimos del formulario de insertarCandidato
             
-            $telefono = $_POST['telefono'];
+            //$telefono = $_POST['telefono'];
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
             $especialidad = $_POST['especialidad'];
             $software1 = $_POST['software1'];
             $experiencia1 = $_POST['experiencia1'];
             $notas = $_POST['notas'];
-
-            // A la espera de ver la forma de buscar diferentes softwares y experiencias asociadas sin tener una query tan larga
-
-            /*$experiencia1 = $_POST['experiencia1'];
-            $software2 = $_POST['software2'];
-            $experiencia2 = $_POST['experiencia2'];*/
-            
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -62,16 +55,32 @@
 
             // Se especifica y ejecuta la query
             
+            $queryDatosCandidato = "SELECT * FROM `datos` JOIN `softwares` ON 
+                datos.TELEFONO = softwares.TELEFONO WHERE
+                /*ESPECIALIDAD LIKE '%$especialidad%' AND*/
+                TITULO LIKE '%$titulo%'/* AND
+                SECTOR LIKE '%$sector%' AND
+                NOTAS LIKE '%$notas%' AND
+                SOFTWARE LIKE '$software1'*/";
 
+            //$querySoftwareCandidato = "SELECT * FROM `softwares` WHERE
+              //  SOFTWARE = '$software1'";
 
-
+            $resultadosDatos = mysqli_query($conexion, $queryDatosCandidato);
+            
+            if($resultadosDatos == false){
+                echo "Error al encontrar los candidatos. " . mysqli_error($conexion);
+            } else {
+                while(($fila = mysqli_fetch_array($resultadosDatos, MYSQLI_ASSOC))){
+                    echo $fila['NOMBRE'] . " " . $fila['APELLIDOS'] . " " . $fila['EMAIL'] . " " . $fila['TITULO'] . " " . $fila['SOFTWARE'];
+                };
+            }
 
 
 
             // Cerramos la conexión
             mysqli_close($conexion);
 
-            //
         ?>
-    </body>
+    </body> 
 </html>
