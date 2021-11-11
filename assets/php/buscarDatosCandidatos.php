@@ -65,14 +65,11 @@
 
             // Se especifica y ejecuta la query
             $queryBuscarDatosCandidato = "SELECT * FROM `datos` WHERE 
-                NOMBRE LIKE '%$nombre%' OR NULL AND
-                APELLIDOS LIKE '%$apellidos%' OR NULL AND
-                EMAIL LIKE '%$email%' OR NULL AND
+                NOMBRE LIKE '%$nombre%'AND
+                APELLIDOS LIKE '%$apellidos%' AND
+                EMAIL LIKE '%$email%' AND
                 TELEFONO LIKE '%$telefono%' AND 
-                NOTAS LIKE '%$notas%' OR NULL AND
-                ESPECIALIDAD = '$especialidad' AND
-                TITULO = '$titulo' AND
-                SECTOR = '$sector'";
+                NOTAS LIKE '%$notas%'";
 
 
             
@@ -112,7 +109,7 @@
                 echo    "<div class='contenedorResultado'>";
                 echo        "<div class='botones-candidato'>";
                 echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
-                echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?telefono=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
+                echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
                 echo        "</div>";
                 echo        "<div class='notas-candidato-resultado'>";
                 echo            "<h5>Notas: </h5>";
