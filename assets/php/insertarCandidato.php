@@ -83,13 +83,8 @@
             $queryInsertarSoftware5 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software5', '$experiencia5')";
             $queryInsertarSoftware6 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software6', '$experiencia6')";
             
+            
             $resultados  = mysqli_query($conexion, $queryInsertarDatos);
-            mysqli_query($conexion, $queryInsertarSoftware1);
-            mysqli_query($conexion, $queryInsertarSoftware2);
-            mysqli_query($conexion, $queryInsertarSoftware3);
-            mysqli_query($conexion, $queryInsertarSoftware4);
-            mysqli_query($conexion, $queryInsertarSoftware5);
-            mysqli_query($conexion, $queryInsertarSoftware6);
             
             // Turn off all error reporting
             error_reporting(E_ERROR | E_PARSE);
@@ -99,6 +94,14 @@
             }else if($resultados == false){
                 echo "<div>Error al insertar el candidato: " . mysqli_error($conexion) . " </div>";
             } else {
+
+                mysqli_query($conexion, $queryInsertarSoftware1);
+                mysqli_query($conexion, $queryInsertarSoftware2);
+                mysqli_query($conexion, $queryInsertarSoftware3);
+                mysqli_query($conexion, $queryInsertarSoftware4);
+                mysqli_query($conexion, $queryInsertarSoftware5);
+                mysqli_query($conexion, $queryInsertarSoftware6);
+
                 echo "<div class='resultadoCandidato'>";
                 echo "<h4>Candidato: </h4>" . $nombre . " " . $apellidos . "<br>";
                 echo $email . "<br>";
@@ -107,7 +110,7 @@
                 echo "Titulación: " . $titulo . "<br>";
                 echo "Sector: " . $sector;
                 echo "<br>Aplicaciones informáticas: <br>";
-                echo $software1 . "   nivel " . $experiencia1;
+                echo $software1 . "     " . $experiencia1;
                 echo "<div class='contenedorResultado'>";
                 echo "<table><tr><td>Notas: </td><td>". $notas ."</td>";
                 echo "<td><div></div></td>";

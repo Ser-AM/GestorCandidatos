@@ -97,19 +97,21 @@
                 $queryInsertarSoftware6 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software6', '$experiencia6')";
 
                 $resultados  = mysqli_query($conexion, $queryInsertarDatos);
-                mysqli_query($conexion, $queryInsertarSoftware1);
-                mysqli_query($conexion, $queryInsertarSoftware2);
-                mysqli_query($conexion, $queryInsertarSoftware3);
-                mysqli_query($conexion, $queryInsertarSoftware4);
-                mysqli_query($conexion, $queryInsertarSoftware5);
-                mysqli_query($conexion, $queryInsertarSoftware6);
+                
+                if(mysqli_errno($conexion) == 1062){
+                    echo "<div>El número de teléfono introducido ya existe en la base de datos</div>";
+                }else if($resultados == false){
+                    echo "<div>Error al insertar el candidato: " . mysqli_error($conexion) . " </div>";
+                } else {
 
-            if(mysqli_errno($conexion) == 1062){
-                echo "<div>El número de teléfono introducido ya existe en la base de datos</div>";
-            }else if($resultados == false){
-                echo "<div>Error al insertar el candidato: " . mysqli_error($conexion) . " </div>";
-            } else {
-                echo "<div>
+                    mysqli_query($conexion, $queryInsertarSoftware1);
+                    mysqli_query($conexion, $queryInsertarSoftware2);
+                    mysqli_query($conexion, $queryInsertarSoftware3);
+                    mysqli_query($conexion, $queryInsertarSoftware4);
+                    mysqli_query($conexion, $queryInsertarSoftware5);
+                    mysqli_query($conexion, $queryInsertarSoftware6);
+                    
+                    echo "<div>
                         <p>Información de $nombre $apellidos actualizada correctamente</p><br>
                         <div><button><a href=perfilCandidato.php?tln=$telefono>Volver al perfil del candidato</a></button></div>
                     </div>";
