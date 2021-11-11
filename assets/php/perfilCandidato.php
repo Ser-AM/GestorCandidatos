@@ -194,11 +194,8 @@
                                                 require 'partials/options-exp.php';
                     echo"                   </select>
                                         </div>
-                                    </div>
-                                
-                            </fieldset>
-                            <br>
-                            <input type='submit' name='enviaFormulario' value='Insertar'>
+                                    </div>                               
+                            </fieldset>                            
                         </div>
                     </form>
                 " ;
