@@ -36,21 +36,21 @@
                                 <div id="titulo-box">
                                     <label for="Titulo">Título:</label>
                                     <select name="titulo" id="titulo">
-                                        <option  selected>No procede</option>
-                                        <option value="Arquitecto">Arquitecto</option>
-                                        <option value="IngenieroCivil">Ing. Civil</option>
-                                        <option value="IngenieroElectrico">Ing. Eléctrico</option>
-                                        <option value="IngenieroMecanico">Ing. Mecánico</option>
+                                        <option value=" " selected>No procede</option>
+                                        <option value="Arquitecto ">Arquitecto</option>
+                                        <option value="IngenieroCivil ">Ing. Civil</option>
+                                        <option value="IngenieroElectrico ">Ing. Eléctrico</option>
+                                        <option value="IngenieroMecanico ">Ing. Mecánico</option>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <label for="sector">Sector:</label>
                                     <select id="sector" name="sector">
-                                        <option  selected>No procede</option>
-                                        <option value="Aguas">Aguas</option>
-                                        <option value="Oil&Gas">Oil&Gas</option>
-                                        <option value="Renovables">Renovables</option>
-                                        <option value="Fotovoltaica">Fotovoltaica</option>
+                                        <option  value=" " selected>No procede</option>
+                                        <option value="Aguas ">Aguas</option>
+                                        <option value="Oil&Gas ">Oil&Gas</option>
+                                        <option value="Renovables ">Renovables</option>
+                                        <option value="Fotovoltaica ">Fotovoltaica</option>
                                     </select>
                                 </div>
                             </div>
@@ -69,11 +69,11 @@
                     <div class="seleccionar-especialidad">
                         <select name= "especialidad" class="especialidad">
                             <option selected disabled hidden>Especialidad</option>
-                            <option value="mecanica">Mecánica</option>
-                            <option value="arquitectura">Arquitectura</option>
-                            <option value="obra-civil">Obra Civil</option>
-                            <option value="industrial">Industrial</option>
-                            <option value="otros">Otros</option>
+                            <option value="Mecanica ">Mecánica</option>
+                            <option value="Arquitectura ">Arquitectura</option>
+                            <option value="Obra-civil ">Obra Civil</option>
+                            <option value="Industrial ">Industrial</option>
+                            <option value="Otros ">Otros</option>
                         </select>
                     </div>
                     

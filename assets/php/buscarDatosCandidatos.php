@@ -69,7 +69,8 @@
                 APELLIDOS LIKE '%$apellidos%' AND
                 EMAIL LIKE '%$email%' AND
                 TELEFONO LIKE '%$telefono%' AND 
-                NOTAS LIKE '%$notas%'";
+                NOTAS LIKE '%$notas%'
+                ORDER BY NOMBRE";
 
 
             
