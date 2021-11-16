@@ -13,6 +13,8 @@ try{
     $numResult = mysqli_num_rows($resultado);
 
     if($numResult > 0){
+        session_start();
+        $_SESSION["usuario"] = $usuarioPOST;
         header("Location: ../../crearCandidato.php");
     }else{
         header("Location: ../../index.html");
