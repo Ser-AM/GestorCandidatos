@@ -215,7 +215,7 @@ button a{
 #buscar-por-programas{
     width:180px;
 }
-input[type="text"], input[type="email"], input[type="tel"], select {
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select {
     display: block;
     width: 100%;
     padding: 12px 20px;
@@ -307,4 +307,13 @@ form#form-fila-candidato{
 }
 div#boton-ver-perfil{
     padding: 0px;
+}
+#form-login{
+    margin: auto;
+}
+#boton-login{
+    margin-top: 20px;
+}
+#h2-login{
+    text-align: center;
 }

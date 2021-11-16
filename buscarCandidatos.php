@@ -143,20 +143,19 @@
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
                                 </select>
+            <!--    Comentado el select de experiencia, para que solo aparezca programa en la pagina de busqueda
                                 <select name= "experiencia1" class="experiencia busqueda" disabled>
                                     <option value="" selected disabled hidden>Experiencia</option>
-                            <!--    Comentado el select de experiencia, para que solo aparezca programa en la pagina de busqueda
                                     <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
                                     <option value="3">3. Avanzado (Tiempo sin usarlo)</option>
                                     <option value="4">4. Muy Avanzado (Uso diario + de 2 años)</option>
-                                    <option value="5">5. Nivel Administrador</option> -->
+                                    <option value="5">5. Nivel Administrador</option>
                                 </select>
                             </div>
                             <div class="programa-row busqueda">
                                 <select name= "software2" class="programa general" disabled>
                                     <option value="" selected disabled hidden>Programa general</option>
-                                    <!--   Comentado todo el segundo bloque de seleccion de programa, para que solo aparezca uno en la pagina de busqueda
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
                                         <option value="SOLIDEDGE">SOLIDEDGE</option>
@@ -203,16 +202,15 @@
                                         <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
                                         <option value="NAVISWORKS">NAVISWORKS</option>
                                     </optgroup>
-                                -->
                                 </select>
                                 <select name= "experiencia2" class="experiencia busqueda" disabled>
                                 <option value="" selected disabled hidden>Experiencia</option>
-                                <!--<option value="1">1. Sólo Formación</option>
+                                    <option value="1">1. Sólo Formación</option>
                                     <option value="2">2. Formación + Proyectos Puntuales</option>
                                     <option value="3">3. Avanzado (Tiempo sin usarlo)</option>
                                     <option value="4">4. Muy Avanzado (Uso diario + de 2 años)</option>
-                                    <option value="5">5. Nivel Administrador</option>-->
-                                </select>
+                                    <option value="5">5. Nivel Administrador</option>
+                                </select>-->
                             </div>
 
 
