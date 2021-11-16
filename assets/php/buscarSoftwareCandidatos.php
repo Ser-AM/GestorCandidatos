@@ -17,7 +17,7 @@
             </div>
             <nav>
                 <button><a href="../../crearCandidato.php">Añadir candidato</a></button>
-                <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
+                <button><a href="../../buscarCandidatos.php">Buscar candidatos</a></button>
             </nav>
         </header>
         <?php
@@ -37,31 +37,22 @@
             // Importamos los datos de conexión:
             require("datosConexion.php");
 
-            // Abrimos la conexión:
-            $conexion = mysqli_connect($db_host, $db_usuario, $db_password);
+            //COMPROBAMOS SI HAY SESIÓN INICIADA
+            session_start();
 
-            // Capturamos el posible error de conexión y lo mostramos por pantalla:
-            if(mysqli_connect_errno()){
-                print "Fallo al intentar conectar con la base de datos";
-
-                exit;
+            if(!isset($_SESSION["usuario"])){
+                header("Location: ../../index.html");
             }
 
-            // Seleccionamos la base de datos con la que queremos interactuar
-            mysqli_select_db($conexion, $db_nombre) or die("No se encontró la base de datos");
-
-            // Convertimos a formato UTF8 los caracteres de la conexión:
-            mysqli_set_charset($conexion, "UTF8");
-
             // Se especifica y ejecuta la query
-            
             $queryDatosCandidato = "SELECT * FROM `datos` JOIN `softwares` ON 
                     datos.TELEFONO = softwares.TELEFONO WHERE
                     ESPECIALIDAD LIKE '%$especialidad%' AND
                     TITULO LIKE '%$titulo%' AND
                     SECTOR LIKE '%$sector%' AND
                     SOFTWARE LIKE '%$software1%' AND
-                    NOTAS LIKE '%$notas%'";
+                    NOTAS LIKE '%$notas%'
+                    ORDER BY NOMBRE";
 
             $resultadosDatos = mysqli_query($conexion, $queryDatosCandidato);
             $nombreCandidato = " ";

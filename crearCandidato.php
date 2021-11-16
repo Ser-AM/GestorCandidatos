@@ -11,6 +11,16 @@
     	<script src="assets/js/funciones.js"></script>
     </head>
     <body>
+
+    <?php 
+        //COMPROBAMOS SI HAY SESIÓN INICIADA
+        session_start();
+
+        if(!isset($_SESSION["usuario"])){
+            header("Location: index.html");
+        }
+
+    ?>
         <header>
             <div class="header">
                 <div id="logo">
@@ -19,7 +29,7 @@
             </div>
                 <nav>
                     <button><a href="crearCandidato.php">Añadir candidato</a></button>
-                    <button><a href="buscarCandidatos.html">Buscar candidatos</a></button>
+                    <button><a href="buscarCandidatos.php">Buscar candidatos</a></button>
                 </nav>
         </header>
         <form action="assets/php/insertarCandidato.php" method="post">

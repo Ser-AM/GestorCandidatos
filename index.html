@@ -20,6 +20,20 @@
             </div>
                 <nav>
                     <button><a href="crearCandidato.php">Añadir candidato</a></button>
-                    <button><a href="buscarCandidatos.html">Buscar candidatos</a></button>
+                    <button><a href="buscarCandidatos.php">Buscar candidatos</a></button>
                 </nav>
         </header>
+        <div>
+            <form action="./assets/php/checkLogin.php" method="post">
+                <h3>Login</h3>
+                <label>Usuario</label>
+                <input type="text" name="usuario" placeholder="Usuario..." required>
+                
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña..." required>
+
+                <input type="submit" name="enviar" value="login">
+            </form>
+        </div>
+    </body>
+</html>

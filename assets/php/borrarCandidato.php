@@ -18,12 +18,19 @@
             </div>
             <nav>
                 <button><a href="../../crearCandidato.php">Añadir candidato</a></button>
-                <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
+                <button><a href="../../buscarCandidatos.php">Buscar candidatos</a></button>
             </nav>
         </header>
         <?php
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
-            //error_reporting(E_ERROR | E_PARSE);
+            error_reporting(E_ERROR | E_PARSE);
+
+            //COMPROBAMOS SI HAY SESIÓN INICIADA
+            session_start();
+
+            if(!isset($_SESSION["usuario"])){
+                header("Location: ../../index.html");
+            }
 
             //Variable que recibimos de buscarCandidatos
             $telefono = $_GET['tln'];

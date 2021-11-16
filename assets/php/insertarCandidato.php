@@ -23,7 +23,7 @@
         <header>
             <div>
                 <button><a href="../../crearCandidato.php">Añadir candidatos</a></button>
-                <button><a href="../../buscarCandidatos.html">Buscar candidatos</a></button>
+                <button><a href="../../buscarCandidatos.php">Buscar candidatos</a></button>
             </div>
             <div>
                 <img src="assets/images/Gestor_Candidatos.png" alt="">
@@ -58,21 +58,12 @@
             // Importamos los datos de conexión:
             require("datosConexion.php");
 
-            // Abrimos la conexión:
-            $conexion = mysqli_connect($db_host, $db_usuario, $db_password);
+            //COMPROBAMOS SI HAY SESIÓN INICIADA
+            session_start();
 
-            // Capturamos el posible error de conexión y lo mostramos por pantalla:
-            if(mysqli_connect_errno()){
-                print "Fallo al intentar conectar con la base de datos";
-
-                exit;
+            if(!isset($_SESSION["usuario"])){
+                header("Location: ../../index.html");
             }
-
-            // Seleccionamos la base de datos con la que queremos interactuar
-            mysqli_select_db($conexion, $db_nombre) or die("No se encontró la base de datos");
-
-            // Convertimos a formato UTF8 los caracteres de la conexión:
-            mysqli_set_charset($conexion, "UTF8");
 
             // Se especifica y ejecuta la query
             $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad')";
@@ -102,7 +93,8 @@
                 mysqli_query($conexion, $queryInsertarSoftware5);
                 mysqli_query($conexion, $queryInsertarSoftware6);
 
-                echo "<div class='resultadoCandidato'>";
+                header("Location: perfilCandidato.php?tln=$telefono");
+                /*echo "<div class='resultadoCandidato'>";
                 echo "<h4>Candidato: </h4>" . $nombre . " " . $apellidos . "<br>";
                 echo $email . "<br>";
                 echo "Número de teléfono: " . $telefono . "<br>";
@@ -116,7 +108,7 @@
                 echo "<td><div></div></td>";
                 echo "<td>Currículum => </td><td><a href='../../cvs/CV".$telefono."' target='_blank'>CV ". $nombre."</a></td></tr></table>";
                 echo "";
-                echo "</div></div>";
+                echo "</div></div>";*/
             }
 
 
