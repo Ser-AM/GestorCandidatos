@@ -14,13 +14,14 @@
 
     <?php 
         //COMPROBAMOS SI HAY SESIÓN INICIADA
-        session_start();
+        //session_start();
 
-        if(!isset($_SESSION["usuario"])){
+        if(!isset($_COOKIE["usuario"])){
             header("Location: index.html");
         }
 
     ?>
+
         <header>
             <div class="header">
                 <div id="logo">

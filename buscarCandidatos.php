@@ -16,7 +16,7 @@
         //COMPROBAMOS SI HAY SESIÓN INICIADA
         session_start();
 
-        if(!isset($_SESSION["usuario"])){
+        if(!isset($_COOKIE["usuario"])){
             header("Location: index.html");
         }
 

@@ -14,7 +14,7 @@ try{
 
     if($numResult > 0){
         session_start();
-        $_SESSION["usuario"] = $usuarioPOST;
+        setcookie("usuario", $usuarioPOST, time() + 10800, '/');
         header("Location: ../../crearCandidato.php");
     }else{
         header("Location: ../../index.html");
