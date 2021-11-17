@@ -94,8 +94,8 @@
                         <div class="form-busqueda">
                             <div class="especialidad busqueda general">
                                 <div class="programa-row busqueda">
-                                    <select name= "software1" class="programa general">
-                                        <option value=" " selected disabled hidden>Programa general</option>
+                                    <select name= "software1">
+                                        <option value=" " selected disabled hidden>Programa</option>
                                     <optgroup label="Mecánica">
                                         <option value="SOLIDWORKS">SOLIDWORKS</option>
                                         <option value="SOLIDEDGE">SOLIDEDGE</option>
@@ -213,7 +213,7 @@
                                 </select>-->
                             </div>
 
-
+                            <label for="Titulo">Notas:</label>
                             <input type="text" name="notas" placeholder="Buscar en notas">
                             </div>
                         </div>
