@@ -60,164 +60,83 @@
                 <form id="form-busqueda" action="assets/php/buscarSoftwareCandidatos.php" method="post">
                     <div id="area-busqueda">
                         <div class="form-busqueda">
-                            <select name= "especialidad" class="especialidad-busqueda">
-                                <option value=" " selected hidden disabled>Especialidad</option>
-                                <option value="mecanica">Mecánica</option>
-                                <option value="arquitectura">Arquitectura</option>
-                                <option value="obra-civil">Obra Civil</option>
-                                <option value="industrial">Industrial</option>
-                                <option value="otros"> Otros</option>
-                            </select>
+                            <div id="div-titulo-sector">
+                                <div id="titulo-box">
+                                    <select name="departamento" id="titulo">
+                                        <option value=" " selected>Departamento</option>
+                                        <?php include "assets/php/partials/options-departamento.php"?>
+                                    </select>
+                                </div>
+                                <div id="sector-box">
+                                    <select id="sector" name="perfil">
+                                        <option value=" " selected>Perfil</option>
+                                        <?php include "assets/php/partials/options-sector.php"?>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div id="div-titulo-sector">
+                                <div id="titulo-box">
+                                    <label for="Titulo">Inglés:</label>
+                                    <select name="ingles" id="titulo">
+                                        <option value=" " selected>No procede</option>
+                                        <?php include "assets/php/partials/options-idiomas.php"?>
+                                    </select>
+                                </div>
+                                <div id="sector-box">
+                                    <label for="sector">Alemán:</label>
+                                    <select id="sector" name="aleman">
+                                        <option value=" " selected>No procede</option>
+                                        <?php include "assets/php/partials/options-idiomas.php"?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-busqueda">
+                            
+                            <div class="especialidad busqueda general">
+                                <div class="programa-row busqueda">
+                                    <select name= "software1">
+                                        <option value=" " selected disabled hidden>Programa</option>
+                                        <?php include "assets/php/partials/options-softwares.php"?>
+                                </select>
+            <!--    Comentado el select de experiencia, para que solo aparezca programa en la pagina de busqueda
+                                <select name= "experiencia1" class="experiencia busqueda" disabled>
+FALTA APERTURA Y CIERRE PHP     include "assets/php/partials/options-exp.php"
+                                </select>
+                            </div>
+                            <div class="programa-row busqueda">
+                                <select name= "software2" class="programa general" disabled>
+                                    <option value="" selected disabled hidden>Programa general</option>
+FALTA APERTURA Y CIERRE PHP     include "assets/php/partials/options-softwares.php"
+                                </select>
+                                <select name= "experiencia2" class="experiencia busqueda" disabled>
+                                <option value="" selected disabled hidden>Experiencia</option>
+FALTA APERTURA Y CIERRE PHP     include "assets/php/partials/options-exp.php"
+                                </select>-->
+                            </div>
                             <div id="div-titulo-sector">
                                 <div id="titulo-box">
                                     <label for="Titulo">Título:</label>
                                     <select name="titulo" id="titulo">
                                         <option value=" " selected>No procede</option>
-                                        <option value="Arquitecto">Arquitecto</option>
-                                        <option value="IngenieroCivil">Ing. Civil</option>
-                                        <option value="IngenieroElectrico">Ing. Eléctrico</option>
-                                        <option value="IngenieroMecanico">Ing. Mecánico</option>
+                                        <?php include "assets/php/partials/options-titulo.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <label for="sector">Sector:</label>
                                     <select id="sector" name="sector">
                                         <option value=" " selected>No procede</option>
-                                        <option value="Aguas">Aguas</option>
-                                        <option value="Oil&Gas">Oil&Gas</option>
-                                        <option value="Renovables">Renovables</option>
-                                        <option value="Fotovoltaica">Fotovoltaica</option>
+                                        <?php include "assets/php/partials/options-sector.php"?>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="form-busqueda">
-                            <div class="especialidad busqueda general">
-                                <div class="programa-row busqueda">
-                                    <select name= "software1">
-                                        <option value=" " selected disabled hidden>Programa</option>
-                                    <optgroup label="Mecánica">
-                                        <option value="SOLIDWORKS">SOLIDWORKS</option>
-                                        <option value="SOLIDEDGE">SOLIDEDGE</option>
-                                        <option value="CATIA">CATIA</option>
-                                        <option value="INVENTOR">INVENTOR</option>
-                                        <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
-                                        <option value="AUTOCAD 2D">AUTOCAD 2D</option>
-                                        <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
-                                        <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
-                                        <option value="ANSYS">ANSYS</option>
-                                        <option value="TOP SOLID">TOP SOLID</option>
-                                    </optgroup>
-                                    <optgroup label="Arquitectura">
-                                        <option value="REVIT">REVIT</option>
-                                        <option value="REVIT ARQ">REVIT ARQ</option>
-                                        <option value="REVIT MEP">REVIT MEP</option>
-                                        <option value="REVIT STRUC">REVIT STRUC</option>
-                                        <option value="AECOSIM">AECOSIM</option>
-                                        <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
-                                        <option value="SKETCH UP">SKETCH UP</option>
-                                        <option value="NAVISWORKS">NAVISWORKS</option>
-                                    </optgroup>
-                                    <optgroup label="Obra Civil">
-                                        <option value="TEKLA">TEKLA</option>
-                                        <option value="ARMACAD">ARMACAD</option>
-                                        <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
-                                        <option value="CYPE">CYPE</option>
-                                        <option value="SAP2000">SAP2000</option>
-                                        <option value="STAAD PRO">STAAD PRO</option>
-                                        <option value="TRICALC">TRICALC</option>
-                                        <option value="PRESTO">PRESTO</option>
-                                        <option value="MENFIS">MENFIS</option>
-                                        <option value="ARQUÍMEDES">ARQUÍMEDES</option>
-                                        <option value="ArchiCAD">ArchiCAD</option>
-                                        <option value="MICROSTATION">MICROSTATION</option>
-                                        <option value="ISPOL">ISPOL</option>
-                                    </optgroup>
-                                    <optgroup label="Industrial">
-                                        <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
-                                        <option value="SMART PLANT 3D">SMART PLANT 3D</option>
-                                        <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
-                                        <option value="PDMS">PDMS</option>
-                                        <option value="PDS">PDS</option>
-                                        <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
-                                        <option value="NAVISWORKS">NAVISWORKS</option>
-                                    </optgroup>
-                                </select>
-            <!--    Comentado el select de experiencia, para que solo aparezca programa en la pagina de busqueda
-                                <select name= "experiencia1" class="experiencia busqueda" disabled>
-                                    <option value="" selected disabled hidden>Experiencia</option>
-                                    <option value="1">1. Sólo Formación</option>
-                                    <option value="2">2. Formación + Proyectos Puntuales</option>
-                                    <option value="3">3. Avanzado (Tiempo sin usarlo)</option>
-                                    <option value="4">4. Muy Avanzado (Uso diario + de 2 años)</option>
-                                    <option value="5">5. Nivel Administrador</option>
-                                </select>
-                            </div>
-                            <div class="programa-row busqueda">
-                                <select name= "software2" class="programa general" disabled>
-                                    <option value="" selected disabled hidden>Programa general</option>
-                                    <optgroup label="Mecánica">
-                                        <option value="SOLIDWORKS">SOLIDWORKS</option>
-                                        <option value="SOLIDEDGE">SOLIDEDGE</option>
-                                        <option value="CATIA">CATIA</option>
-                                        <option value="INVENTOR">INVENTOR</option>
-                                        <option value="CREO (PRO ENGINEER)">CREO (PRO ENGINEER)</option>
-                                        <option value="AUTOCAD 2D">AUTOCAD 2D</option>
-                                        <option value="AUTOCAD CÁLCULO">AUTOCAD CÁLCULO</option>
-                                        <option value="AUTOCAD MECHANICAL">AUTOCAD MECHANICAL</option>
-                                        <option value="ANSYS">ANSYS</option>
-                                        <option value="TOP SOLID">TOP SOLID</option>
-                                    </optgroup>
-                                    <optgroup label="Arquitectura">
-                                        <option value="REVIT">REVIT</option>
-                                        <option value="REVIT ARQ">REVIT ARQ</option>
-                                        <option value="REVIT MEP">REVIT MEP</option>
-                                        <option value="REVIT STRUC">REVIT STRUC</option>
-                                        <option value="AECOSIM">AECOSIM</option>
-                                        <option value="AUTOCAD 2D / 3D">AUTOCAD 2D / 3D</option>
-                                        <option value="SKETCH UP">SKETCH UP</option>
-                                        <option value="NAVISWORKS">NAVISWORKS</option>
-                                    </optgroup>
-                                    <optgroup label="Obra Civil">
-                                        <option value="TEKLA">TEKLA</option>
-                                        <option value="ARMACAD">ARMACAD</option>
-                                        <option value="AUTOCAD CIVIL 3D">AUTOCAD CIVIL 3D</option>
-                                        <option value="CYPE">CYPE</option>
-                                        <option value="SAP2000">SAP2000</option>
-                                        <option value="STAAD PRO">STAAD PRO</option>
-                                        <option value="TRICALC">TRICALC</option>
-                                        <option value="PRESTO">PRESTO</option>
-                                        <option value="MENFIS">MENFIS</option>
-                                        <option value="ARQUÍMEDES">ARQUÍMEDES</option>
-                                        <option value="ArchiCAD">ArchiCAD</option>
-                                        <option value="MICROSTATION">MICROSTATION</option>
-                                        <option value="ISPOL">ISPOL</option>
-                                    </optgroup>
-                                    <optgroup label="Industrial">
-                                        <option value="AUTOCAD PLANT 3D">AUTOCAD PLANT 3D</option>
-                                        <option value="SMART PLANT 3D">SMART PLANT 3D</option>
-                                        <option value="SMART PLANT P&ID">SMART PLANT P&ID</option>
-                                        <option value="PDMS">PDMS</option>
-                                        <option value="PDS">PDS</option>
-                                        <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
-                                        <option value="NAVISWORKS">NAVISWORKS</option>
-                                    </optgroup>
-                                </select>
-                                <select name= "experiencia2" class="experiencia busqueda" disabled>
-                                <option value="" selected disabled hidden>Experiencia</option>
-                                    <option value="1">1. Sólo Formación</option>
-                                    <option value="2">2. Formación + Proyectos Puntuales</option>
-                                    <option value="3">3. Avanzado (Tiempo sin usarlo)</option>
-                                    <option value="4">4. Muy Avanzado (Uso diario + de 2 años)</option>
-                                    <option value="5">5. Nivel Administrador</option>
-                                </select>-->
-                            </div>
-
+                    </div>
+                </div>
                             <label for="Titulo">Notas:</label>
                             <input type="text" name="notas" placeholder="Buscar en notas">
-                            </div>
-                        </div>
-                    </div>
+                            
                     <input type="submit" name="buscarCandidato" value="Buscar">
                 </form>
             </div>

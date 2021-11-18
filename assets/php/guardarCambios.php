@@ -8,16 +8,6 @@
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="assets/js/jquery.min.js"></script>
     	<script src="assets/js/funciones.js"></script>
-        <style>
-            table{
-                align-items: center;
-                display: inline;
-            }
-            .resultadoCandidato{
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -52,10 +42,6 @@
             $experiencia3 = $_POST['experiencia3'];
             $software4 = $_POST['software4'];
             $experiencia4 = $_POST['experiencia4'];
-            $software5 = $_POST['software5'];
-            $experiencia5 = $_POST['experiencia5'];
-            $software6 = $_POST['software6'];
-            $experiencia6 = $_POST['experiencia6'];
 
             // Por la URL recibimos el telefono antiguo del candidato
             $telefonoAntiguo = $_GET["tln"];
@@ -86,8 +72,6 @@
                 $queryInsertarSoftware2 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2')";
                 $queryInsertarSoftware3 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3')";
                 $queryInsertarSoftware4 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software4', '$experiencia4')";
-                $queryInsertarSoftware5 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software5', '$experiencia5')";
-                $queryInsertarSoftware6 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software6', '$experiencia6')";
 
                 $resultados  = mysqli_query($conexion, $queryInsertarDatos);
                 
@@ -101,8 +85,6 @@
                     mysqli_query($conexion, $queryInsertarSoftware2);
                     mysqli_query($conexion, $queryInsertarSoftware3);
                     mysqli_query($conexion, $queryInsertarSoftware4);
-                    mysqli_query($conexion, $queryInsertarSoftware5);
-                    mysqli_query($conexion, $queryInsertarSoftware6);
                     
                     echo "<div>
                         <p>Información de $nombre $apellidos actualizada correctamente</p><br>

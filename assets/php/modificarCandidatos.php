@@ -75,24 +75,34 @@
                                             <div id='div-titulo-sector'>
                                                 <div id='titulo-box'>
                                                     <label for='Titulo'>Título:</label>
-                                                    <select name='titulo' id='titulo' >
-                                                        <option value='".$fila['TITULO']."' selected>".$fila['TITULO']."</option>
-                                                        <option value='Arquitecto'>Arquitecto</option>
-                                                        <option value='IngenieroCivil'>Ing. Civil</option>
-                                                        <option value='IngenieroElectrico'>Ing. Eléctrico</option>
-                                                        <option value='IngenieroMecanico'>Ing. Mecánico</option>
-                                                    </select>
+                                                    <select name='titulo' class='programa general'>
+                                                        <option value='".$fila['TITULO']."' selected>".$fila['TITULO']."</option>";
+                                                        include 'partials/options-titulo.php';
+                        echo"                       </select>
                                                 </div>
                                                 <div id='sector-box'>
                                                     <label for='sector'>Sector:</label>
-                                                    <select id='sector' name='sector' >
-                                                        <option value='".$fila['SECTOR']."' selected>".$fila['SECTOR']."</option>
-                                                        <option value='Aguas'>Aguas</option>
-                                                        <option value='Oil&Gas'>Oil&Gas</option>
-                                                        <option value='Renovables'>Renovables</option>
-                                                        <option value='Fotovoltaica'>Fotovoltaica</option>
-                                                    </select>
+                                                    <select class='programa general' name='sector' >
+                                                        <option value='".$fila['SECTOR']."' selected>".$fila['SECTOR']."</option>";
+                                                        include 'partials/options-sector.php';
+                        echo"                       </select>
                                                 </div>
+                                            </div>
+                                            <div id='div-titulo-sector'>
+                                                <div id='titulo-box'>
+                                                <label for='sector'>Inglés:</label>
+                                                <select class='programa general' name='ingles'>
+                                                    <option value='".$fila['INGLES']."' selected>".$fila['INGLES']."</option>";
+                                                    include 'partials/options-idiomas.php';
+                        echo"                   </select>
+                                                </div>
+                                                <div id='sector-box'>
+                                                <label for='sector'>Alemán:</label>
+                                                <select class='programa general' name='aleman'>
+                                                    <option value='".$fila['ALEMAN']."' selected>".$fila['ALEMAN']."</option>";
+                                                    include 'partials/options-idiomas.php';
+                        echo"                   </select>
+                                            </div>
                                             </div>
                                         </fieldset>
                                     </div>
@@ -108,34 +118,34 @@
                                 <fieldset>
                                     <div class='seleccionar-especialidad'>
                                         <select name= 'departamento' class='especialidad' >
-                                            <option value='".$fila['DEPARTAMENTO']."' selected  hidden>".$fila['DEPARTAMENTO']."</option>
-                                            <option value='mecanica'>Mecánica</option>
-                                            <option value='arquitectura'>Arquitectura</option>
-                                            <option value='obra-civil'>Obra Civil</option>
-                                            <option value='industrial'>Industrial</option>
-                                            <option value='otros'>Otros</option>
-                                        </select>
+                                            <option value='".$fila['DEPARTAMENTO']."' selected  hidden>".$fila['DEPARTAMENTO']."</option>";
+                                            include 'partials/options-departamento.php';
+                        echo"           </select>
+                                        <select name= 'perfil' class='especialidad' >
+                                            <option value='".$fila['PERFIL']."' selected  hidden>".$fila['PERFIL']."</option>";
+                                            include 'partials/options-perfil.php';
+                        echo"           </select>
                                     </div>
                                     
                                         <div class='especialidad'>
                                             <div class='programa-row-left'>
                                                 <select name= 'software1' class='programa general' >
                                                     <option value='".$software[1]."' selected  hidden>".$software[1]."</option>";
-                                                    require 'partials/options-softwares.php';
+                                                    include 'partials/options-softwares.php';
                         echo"                   </select>
                                                 <select name= 'experiencia1' class='experiencia' >
                                                     <option value='".$experiencia[1]."' selected  hidden>".$experiencia[1]."</option>";
-                                                    require 'partials/options-exp.php';
+                                                    include 'partials/options-exp.php';
                         echo"                   </select>
                                             </div>
                                             <div class='programa-row-right'>
                                                 <select name= 'software2' class='programa general' >
                                                     <option value='".$software[2]."' selected  hidden>".$software[2]."</option>";
-                                                    require 'partials/options-softwares.php';
+                                                    include 'partials/options-softwares.php';
                         echo"                   </select>
                                                 <select name= 'experiencia2' class='experiencia' >
                                                     <option value='".$experiencia[2]."' selected  hidden>".$experiencia[2]."</option>";
-                                                    require 'partials/options-exp.php';
+                                                    include 'partials/options-exp.php';
                         echo"                   </select>
                                             </div>
                                         </div>
@@ -143,43 +153,21 @@
                                             <div class='programa-row-left'>
                                                 <select name= 'software3' class='programa general' >
                                                     <option value='".$software[3]."' selected  hidden>".$software[3]."</option>";
-                                                    require 'partials/options-softwares.php';
+                                                    include 'partials/options-softwares.php';
                         echo"                   </select>
                                                 <select name= 'experiencia3' class='experiencia' >
                                                     <option value='".$experiencia[3]."' selected  hidden>".$experiencia[3]."</option>";
-                                                    require 'partials/options-exp.php';
+                                                    include 'partials/options-exp.php';
                         echo"                   </select>
                                             </div>
                                             <div class='programa-row-right'>
                                                 <select name= 'software4' class='programa general' >
                                                     <option value='".$software[4]."' selected  hidden>".$software[4]."</option>";
-                                                    require 'partials/options-softwares.php';
+                                                    include 'partials/options-softwares.php';
                         echo"                        </select>
                                                 <select name= 'experiencia4' class='experiencia' >
                                                     <option value='".$experiencia[4]."' selected  hidden>".$experiencia[4]."</option>";
-                                                    require 'partials/options-exp.php';
-                        echo"                   </select>
-                                            </div>
-                                        </div>
-                                        <div class='especialidad'>
-                                            <div class='programa-row-left'>
-                                                <select name= 'software5' class='programa general' >
-                                                    <option value='".$software[5]."' selected  hidden>".$software[5]."</option>";
-                                                    require 'partials/options-softwares.php';
-                        echo"                        </select>
-                                                <select name= 'experiencia5' class='experiencia' >
-                                                    <option value='".$experiencia[5]."' selected  hidden>".$experiencia[5]."</option>";
-                                                    require 'partials/options-exp.php';
-                        echo"                   </select>
-                                            </div>
-                                            <div class='programa-row-right'>
-                                                <select name= 'software6' class='programa general' >
-                                                    <option value='".$software[6]."' selected  hidden>".$software[6]."</option>";
-                                                    require 'partials/options-softwares.php';
-                        echo"                        </select>
-                                                <select name= 'experiencia6' class='experiencia' >
-                                                    <option value='".$experiencia[6]."' selected  hidden>".$experiencia[6]."</option>";
-                                                    require 'partials/options-exp.php';
+                                                    include 'partials/options-exp.php';
                         echo"                   </select>
                                             </div>
                                         </div>
@@ -204,7 +192,5 @@ $queryInsertarCandidato = "INSERT INTO `datos`
 (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$ingles', $aleman); INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1');
 INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2');
 INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3');
-INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software4', '$experiencia4');
-INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software5', '$experiencia5'); 
-INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software6', '$experiencia6')";
+INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software4', '$experiencia4');";
             ?>
