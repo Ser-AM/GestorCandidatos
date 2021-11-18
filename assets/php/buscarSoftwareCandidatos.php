@@ -56,7 +56,7 @@
                     ALEMAN LIKE '%$aleman%' AND
                     SOFTWARE LIKE '%$software1%' AND
                     NOTAS LIKE '%$notas%'
-                    ORDER BY NOMBRE";
+                    ORDER BY datos.TELEFONO";
 
             $resultadosDatos = mysqli_query($conexion, $queryDatosCandidato);
             $nombreCandidato = " ";

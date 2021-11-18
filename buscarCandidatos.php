@@ -63,7 +63,7 @@
                             <div id="div-titulo-sector">
                                 <div id="titulo-box">
                                     <select name="departamento" id="titulo">
-                                        <option value=" " selected>Departamento</option>
+                                        <option value="" selected>Departamento</option>
                                         <?php include "assets/php/partials/options-departamento.php"?>
                                     </select>
                                 </div>
