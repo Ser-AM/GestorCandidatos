@@ -70,7 +70,7 @@
                                 <div id="sector-box">
                                     <select id="sector" name="perfil">
                                         <option value=" " selected>Perfil</option>
-                                        <?php include "assets/php/partials/options-sector.php"?>
+                                        <?php include "assets/php/partials/options-perfil.php"?>
                                     </select>
                                 </div>
                             </div>
