@@ -41,7 +41,9 @@
             $notas = $_POST['notas'];
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
-            $especialidad = $_POST['especialidad'];
+            $departamento = $_POST['departamento'];
+            $ingles = $_POST['ingles'];
+            $aleman = $_POST['aleman'];
             $software1 = $_POST['software1'];
             $experiencia1 = $_POST['experiencia1'];
             $software2 = $_POST['software2'];
@@ -79,7 +81,7 @@
 
                 //Ahora insertamos los nuevos datos y softwares del Candidato
 
-                $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad')";
+                $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, DEPARTAMENTO, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$departamento', '$ingles', '$aleman')";
                 $queryInsertarSoftware1 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1')";
                 $queryInsertarSoftware2 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2')";
                 $queryInsertarSoftware3 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3')";

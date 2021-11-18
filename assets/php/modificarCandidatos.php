@@ -107,8 +107,8 @@
                             <div id='bloque-programas'>
                                 <fieldset>
                                     <div class='seleccionar-especialidad'>
-                                        <select name= 'especialidad' class='especialidad' >
-                                            <option value='".$fila['ESPECIALIDAD']."' selected  hidden>".$fila['ESPECIALIDAD']."</option>
+                                        <select name= 'departamento' class='especialidad' >
+                                            <option value='".$fila['DEPARTAMENTO']."' selected  hidden>".$fila['DEPARTAMENTO']."</option>
                                             <option value='mecanica'>Mecánica</option>
                                             <option value='arquitectura'>Arquitectura</option>
                                             <option value='obra-civil'>Obra Civil</option>
@@ -201,7 +201,7 @@
 <?php
 
 $queryInsertarCandidato = "INSERT INTO `datos` 
-(NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad'); INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1');
+(NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad', '$ingles', $aleman); INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1');
 INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2');
 INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3');
 INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software4', '$experiencia4');

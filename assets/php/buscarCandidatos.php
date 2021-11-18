@@ -28,7 +28,7 @@
             //COMPROBAMOS SI HAY SESIÓN INICIADA
             session_start();
 
-            if(!isset($_SESSION["usuario"])){
+            if(!isset($_COOKIE["usuario"])){
                 header("Location: ../../index.html");
             }
             
@@ -40,7 +40,9 @@
 
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
-            $especialidad = $_POST['especialidad'];
+            $departamento = $_POST['departamento'];
+            $ingles = $_POST['ingles'];
+            $aleman = $_POST['aleman'];
             $software1 = $_POST['software1'];
             $experiencia1 = $_POST['experiencia1'];
             $notas = $_POST['notas'];
@@ -78,7 +80,7 @@
                 EMAIL LIKE '%$email%' AND
                 TELEFONO LIKE '%$telefono%' AND 
                 NOTAS LIKE '%$notas%' AND
-                ESPECIALIDAD LIKE '%$especialidad%' AND
+                DEPARTAMENTO LIKE '%$departamento%' AND
                 TITULO LIKE '%$titulo%' AND
                 SECTOR LIKE '%$sector%'";
 
@@ -102,7 +104,7 @@
                 echo    "<div class='contenedorResultado'>";
                 echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
                 echo        "<p>".$fila['TELEFONO']."</p>";
-                echo        "<h3>Especialidad: ".$fila['ESPECIALIDAD']."</h3>";
+                echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
                 echo        "<div class='softwareExperiencia'>";
                 
 

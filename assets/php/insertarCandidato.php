@@ -41,7 +41,7 @@
             $notas = $_POST['notas'];
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
-            $especialidad = $_POST['especialidad'];
+            $departamento = $_POST['departamento'];
             $software1 = $_POST['software1'];
             $experiencia1 = $_POST['experiencia1'];
             $software2 = $_POST['software2'];
@@ -54,6 +54,8 @@
             $experiencia5 = $_POST['experiencia5'];
             $software6 = $_POST['software6'];
             $experiencia6 = $_POST['experiencia6'];
+            $ingles = $_POST['ingles'];
+            $aleman = $_POST['aleman'];
 
             // Importamos los datos de conexión:
             require("datosConexion.php");
@@ -66,7 +68,7 @@
             }
 
             // Se especifica y ejecuta la query
-            $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, ESPECIALIDAD) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$especialidad')";
+            $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, DEPARTAMENTO, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$departamento', $ingles, $aleman)";
             $queryInsertarSoftware1 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1')";
             $queryInsertarSoftware2 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2')";
             $queryInsertarSoftware3 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3')";
@@ -94,21 +96,7 @@
                 mysqli_query($conexion, $queryInsertarSoftware6);
 
                 header("Location: perfilCandidato.php?tln=$telefono");
-                /*echo "<div class='resultadoCandidato'>";
-                echo "<h4>Candidato: </h4>" . $nombre . " " . $apellidos . "<br>";
-                echo $email . "<br>";
-                echo "Número de teléfono: " . $telefono . "<br>";
-                echo "<br>Especialidad: " . $especialidad . "<br>";
-                echo "Titulación: " . $titulo . "<br>";
-                echo "Sector: " . $sector;
-                echo "<br>Aplicaciones informáticas: <br>";
-                echo $software1 . "     " . $experiencia1;
-                echo "<div class='contenedorResultado'>";
-                echo "<table><tr><td>Notas: </td><td>". $notas ."</td>";
-                echo "<td><div></div></td>";
-                echo "<td>Currículum => </td><td><a href='../../cvs/CV".$telefono."' target='_blank'>CV ". $nombre."</a></td></tr></table>";
-                echo "";
-                echo "</div></div>";*/
+                
             }
 
 

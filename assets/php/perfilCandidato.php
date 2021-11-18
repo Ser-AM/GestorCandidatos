@@ -110,8 +110,8 @@
                         <div id='bloque-programas'>
                             <fieldset>
                                 <div class='seleccionar-especialidad'>
-                                    <select name= 'especialidad' class='especialidad' disabled>
-                                        <option value='".$fila['ESPECIALIDAD']."' selected disabled hidden>".$fila['ESPECIALIDAD']."</option>
+                                    <select name= 'departamento' class='especialidad' disabled>
+                                        <option value='".$fila['DEPARTAMENTO']."' selected disabled hidden>".$fila['DEPARTAMENTO']."</option>
                                         <option value='mecanica'>Mecánica</option>
                                         <option value='arquitectura'>Arquitectura</option>
                                         <option value='obra-civil'>Obra Civil</option>
@@ -200,5 +200,4 @@
 </html>
 
 <!--CREAR EXCEPCION AL ERROR DE QUE EL NUMERO YA EXISTE PARA PODER GUARDAR LOS DATOS EDITADOS-->
-<!--AGREGAR SENTENCIA QUE PERMITA ELIMINAR UN PERFIL-->
-<!--ENLAZAR EL SUBMIT DESDE AQUI A QUE SE ENVIE CORRECTAMENTE EL FORMULARIO, ACTUALMENTE SALTA ERROR -->
+
