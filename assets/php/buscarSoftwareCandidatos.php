@@ -30,6 +30,7 @@
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
             $departamento = $_POST['departamento'];
+            $perfil = $_POST['perfil'];
             $ingles = $_POST['ingles'];
             $aleman = $_POST['aleman'];
             $software1 = $_POST['software1'];
@@ -50,6 +51,7 @@
             $queryDatosCandidato = "SELECT * FROM `datos` JOIN `softwares` ON 
                     datos.TELEFONO = softwares.TELEFONO WHERE
                     DEPARTAMENTO LIKE '%$departamento%' AND
+                    PERFIL LIKE '%$perfil%' AND
                     TITULO LIKE '%$titulo%' AND
                     SECTOR LIKE '%$sector%' AND
                     INGLES LIKE '%$ingles%' AND
