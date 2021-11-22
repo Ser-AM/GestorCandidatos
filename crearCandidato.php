@@ -99,24 +99,24 @@
                             </select>
                     </div>
                     
-                        <div class="especialidad">                                                          <!--Abrimos los divde forma normal-->
-                            <div class="programa-row-left">                                                 <!--el select tambien lo abrimos desde aqui para que el "name" no se repita-->
-                                <select name= "software1" class="programa general">                         <!--esta linea la dejamos, porque para la hoja de editar el candidato se meteran por php en value y entre las etiquetas la opcion que ya tiene el candidato-->
-                                    <option value="SW1 No introducido" selected disabled hidden>Programa</option>     <!--meterla en value es para que si se sobreescribe porque ese campo no se ha editado, lo haga con la misma informacion-->
-                                    <?php include "assets/php/partials/options-softwares.php"?>             <!--Esta linea importa desde ese archivo todo el contenido de los select (los option y los optgroup)-->
-                                </select>                                                                   <!--el select lo cerramos desde aqui, al hacerlo de esta forma, los archivos que tienen el contenido no solo los reutilizamos en este documento, tambien en el del perfil del candidato-->
+                        <div class="especialidad">
+                            <div class="programa-row-left">
+                                <select name= "software1" class="programa general">
+                                    <option value="PROG-1" selected hidden>Programa</option>
+                                    <?php include "assets/php/partials/options-softwares.php"?>
+                                </select>
                                 <select name= "experiencia1" class="experiencia">
-                                    <option value="EXP1 No introducido" selected disabled hidden>Experiencia</option>
-                                    <?php include "assets/php/partials/options-exp.php"?>                   <!--Igual que el anterior, pero enlaza al documento de la experiencia-->
+                                    <option value="EXP-1" selected hidden>Experiencia</option>
+                                    <?php include "assets/php/partials/options-exp.php"?>
                                 </select>
                             </div>
                             <div class="programa-row-right">
                                 <select name= "software2" class="programa general">
-                                    <option value="SW2 No introducido" selected disabled hidden>Programa</option>
+                                    <option value="PROG-2" selected hidden>Programa</option>
                                     <?php include "assets/php/partials/options-softwares.php"?>
                                 </select>
                                 <select name= "experiencia2" class="experiencia">
-                                    <option value="EXP2 No introducido" selected disabled hidden>Experiencia</option>
+                                    <option value="EXP-2" selected hidden>Experiencia</option>
                                     <?php include "assets/php/partials/options-exp.php"?>
                                 </select>
                             </div>
@@ -124,21 +124,21 @@
                         <div class="especialidad">
                             <div class="programa-row-left">
                                 <select name= "software3" class="programa general">
-                                    <option value="SW3 No introducido" selected disabled hidden>Programa</option>
+                                    <option value="PROG-3" selected hidden>Programa</option>
                                     <?php include "assets/php/partials/options-softwares.php"?>
                                 </select>
                                 <select name= "experiencia3" class="experiencia">
-                                    <option value="EXP3 No introducido" selected disabled hidden>Experiencia</option>
+                                    <option value="EXP-3" selected hidden>Experiencia</option>
                                     <?php include "assets/php/partials/options-exp.php"?>
                                 </select>
                             </div>
                             <div class="programa-row-right">
                                 <select name= "software4" class="programa general">
-                                    <option value="SW4 No introducido" selected disabled hidden>Programa</option>
+                                    <option value="PROG-4" selected hidden>Programa</option>
                                     <?php include "assets/php/partials/options-softwares.php"?>
                                 </select>
                                 <select name= "experiencia4" class="experiencia">
-                                    <option value="EXP4 No introducido" selected disabled hidden>Experiencia</option>
+                                    <option value="EXP-4" selected hidden>Experiencia</option>
                                     <?php include "assets/php/partials/options-exp.php"?>
                                 </select>
                             </div>
