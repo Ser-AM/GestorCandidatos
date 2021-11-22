@@ -89,7 +89,7 @@
                 <fieldset>
                 <div class="seleccionar-especialidad">
                         <select name= "departamento" class="especialidad">
-                            <option selected disabled hidden>Departamento</option>
+                            <option value=" "selected disabled hidden>Departamento</option>
                             <?php include "assets/php/partials/options-departamento.php"?>
                         </select>
 

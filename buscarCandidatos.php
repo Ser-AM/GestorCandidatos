@@ -63,13 +63,13 @@
                             <div id="div-titulo-sector">
                                 <div id="titulo-box">
                                     <select name="departamento" id="titulo">
-                                        <option value=" " selected>Departamento</option>
+                                        <option value="" selected>Departamento</option>
                                         <?php include "assets/php/partials/options-departamento.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <select id="sector" name="perfil">
-                                        <option value=" " selected>Perfil</option>
+                                        <option value="" selected>Perfil</option>
                                         <?php include "assets/php/partials/options-perfil.php"?>
                                     </select>
                                 </div>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div id="sector-box">
                                     <label for="sector">Alemán:</label>
-                                    <select id="sector" name="aleman">
+                                    <select name="aleman" id="sector">
                                         <option value=" " selected>No procede</option>
                                         <?php include "assets/php/partials/options-idiomas.php"?>
                                     </select>
