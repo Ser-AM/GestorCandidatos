@@ -13,13 +13,14 @@
     <body>
 
     <?php 
+        /*
         //COMPROBAMOS SI HAY SESIÓN INICIADA
         session_start();
 
         if(!isset($_COOKIE["usuario"])){
             header("Location: index.html");
         }
-
+        */
     ?>
     
         <header>

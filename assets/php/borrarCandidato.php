@@ -25,12 +25,14 @@
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
             error_reporting(E_ERROR | E_PARSE);
 
+            /*
             //COMPROBAMOS SI HAY SESIÓN INICIADA
             session_start();
 
             if(!isset($_COOKIE["usuario"])){
                 header("Location: ../../index.html");
             }
+            */
 
             //Variable que recibimos de buscarCandidatos
             $telefono = $_GET['tln'];

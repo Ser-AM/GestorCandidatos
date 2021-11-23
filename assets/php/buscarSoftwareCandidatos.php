@@ -75,6 +75,7 @@
                 echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
                 echo        "<p>".$fila['TELEFONO']."</p>";
                 echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
+                echo        "<h3>Perfil: " .$fila['PERFIL']."</h3>";
                 echo        "<div class='softwareExperiencia'>";
                 
 
