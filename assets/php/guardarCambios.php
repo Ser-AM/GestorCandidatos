@@ -21,7 +21,7 @@
         </header>
         <?php
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
-            error_reporting(E_ERROR | E_PARSE);
+            //error_reporting(E_ERROR | E_PARSE);
             
             // Variables que recibimos del formulario de modificarCandidatos.php
             $nombre = $_POST['nombre'];
@@ -32,6 +32,7 @@
             $titulo = $_POST['titulo'];
             $sector = $_POST['sector'];
             $departamento = $_POST['departamento'];
+            $perfil = $_POST['perfil'];
             $ingles = $_POST['ingles'];
             $aleman = $_POST['aleman'];
             $software1 = $_POST['software1'];
@@ -69,7 +70,7 @@
 
                 //Ahora insertamos los nuevos datos y softwares del Candidato
 
-                $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, DEPARTAMENTO, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$departamento', '$ingles', '$aleman')";
+                $queryInsertarDatos = "INSERT INTO `datos` (NOMBRE, APELLIDOS, EMAIL, TELEFONO, NOTAS, TITULO, SECTOR, DEPARTAMENTO, PERFIL, INGLES, ALEMAN) VALUES ('$nombre', '$apellidos', '$email', '$telefono', '$notas', '$titulo', '$sector', '$departamento', '$perfil', '$ingles', '$aleman')";
                 $queryInsertarSoftware1 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software1', '$experiencia1')";
                 $queryInsertarSoftware2 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software2', '$experiencia2')";
                 $queryInsertarSoftware3 = "INSERT INTO `softwares` (TELEFONO, SOFTWARE, EXPERIENCIA) VALUES ('$telefono', '$software3', '$experiencia3')";
