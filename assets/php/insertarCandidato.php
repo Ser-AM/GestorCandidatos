@@ -8,16 +8,7 @@
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="assets/js/jquery.min.js"></script>
     	<script src="assets/js/funciones.js"></script>
-        <style>
-            table{
-                align-items: center;
-                display: inline;
-            }
-            .resultadoCandidato{
-                display: flex;
-                flex-direction: column;
-            }
-        </style>
+        
     </head>
     <body>
         <header>

@@ -40,12 +40,14 @@
             // Importamos los datos de conexión:
             require("datosConexion.php");
 
+            /*
             //COMPROBAMOS SI HAY SESIÓN INICIADA
             session_start();
 
             if(!isset($_COOKIE["usuario"])){
                 header("Location: ../../index.html");
             }
+            */
 
             // Se especifica y ejecuta la query
             $queryDatosCandidato = "SELECT * FROM `datos` JOIN `softwares` ON 

@@ -80,14 +80,14 @@
                                 <div id="titulo-box">
                                     <label for="Titulo">Inglés:</label>
                                     <select name="ingles" id="titulo">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="" selected>No procede</option>
                                         <?php include "assets/php/partials/options-idiomas.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <label for="sector">Alemán:</label>
                                     <select name="aleman" id="sector">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="" selected>No procede</option>
                                         <?php include "assets/php/partials/options-idiomas.php"?>
                                     </select>
                                 </div>
@@ -98,7 +98,7 @@
                             <div class="especialidad busqueda general">
                                 <div class="programa-row busqueda">
                                     <select name= "software1">
-                                        <option value=" " selected disabled hidden>Programa</option>
+                                        <option value="" selected disabled hidden>Programa</option>
                                         <?php include "assets/php/partials/options-softwares.php"?>
                                 </select>
             <!--    Comentado el select de experiencia, para que solo aparezca programa en la pagina de busqueda
@@ -120,14 +120,14 @@ FALTA APERTURA Y CIERRE PHP     include "assets/php/partials/options-exp.php"
                                 <div id="titulo-box">
                                     <label for="Titulo">Título:</label>
                                     <select name="titulo" id="titulo">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="" selected>No procede</option>
                                         <?php include "assets/php/partials/options-titulo.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <label for="sector">Sector:</label>
                                     <select id="sector" name="sector">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="" selected>No procede</option>
                                         <?php include "assets/php/partials/options-sector.php"?>
                                     </select>
                                 </div>
