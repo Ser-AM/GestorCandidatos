@@ -1,3 +1,7 @@
+* { 
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+
 body{
     background-color: grey;
     min-width: 650px;
@@ -152,6 +156,9 @@ div.programa-row-right{
 }
 #div-titulo-sector{
     padding: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 p#advertencia{
     color:red;
@@ -214,7 +221,7 @@ button a{
     text-shadow:0px 1px 0px #662828; 
 }
 #buscar-por-programas{
-    width:180px;
+    width:200px;
 }
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], select {
     width: 100%;
@@ -317,4 +324,16 @@ div#boton-ver-perfil{
 }
 #h2-login{
     text-align: center;
+}
+input:disabled
+{
+	color   : #1A2740;
+}
+select:disabled
+{
+	color   : black;
+}
+textarea:disabled
+{
+	color   : black;
 }
