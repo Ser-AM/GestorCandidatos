@@ -61,7 +61,7 @@
                 ORDER BY NOMBRE";
 
             $resultadosDatos = mysqli_query($conexion, $queryBuscarDatosCandidato);
-            
+            //echo "<div>Se han encontrado " . mysqli_num_rows($resultadosDatos) . " resultados. </div>";
             if($resultadosDatos == false){
                 echo "Error al encontrar los candidatos. ";// . mysqli_error($conexion);
             } else {
@@ -72,11 +72,17 @@
                     $telefonoCandidato = $fila['TELEFONO'];
 
                     echo "<div class='resultadoCandidato'>";
-                    echo    "<div class='contenedorResultado'>";
-                    echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
-                    echo        "<p>".$fila['TELEFONO']."</p>";
-                    echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
-                    echo        "<div class='softwareExperiencia'>";
+                echo    "<div class='contenedorResultado'>";
+                echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
+                echo        "<p><b>Telefono: ".$fila['TELEFONO']."</b></p>";
+                echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
+                echo        "<h3>Perfil: " .$fila['PERFIL']. "</h3>";
+                echo        "<h3>Titulo: " .$fila['TITULO']. "</h3>";
+                echo        "<h3>Sector: " .$fila['SECTOR']. "</h3>";
+                echo        "<h3>Ingles: " .$fila['INGLES']. "</h3>";
+                echo        "<h3>Aleman: </h3>" .$fila['ALEMAN']. "</h3>";
+                echo        "<div class='softwareExperiencia'>
+                                <h3>Softwares: </h3>";
                     
 
                     $queryBuscarSoftwareCandidato = "SELECT * FROM `softwares` WHERE TELEFONO = '$telefonoCandidato'";
@@ -94,7 +100,7 @@
                     echo    "</div>";
                     echo    "<div class='contenedorResultado'>";
                     echo        "<div class='botones-candidato'>";
-                    echo        "<button id='boton-ver-cv'><a href='../../cvs/CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
+                    echo        "<button id='boton-ver-cv'><a href='C:\wamp64\www\webs_php\GestorCandidatos\cvs\CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
                     echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
                     echo        "</div>";
                     echo        "<div class='notas-candidato-resultado'>";

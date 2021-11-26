@@ -21,6 +21,8 @@
             </nav>
         </header>
         <?php
+
+            //use GuzzleHttp\Promise\Promise;
             // No muestra los errores como posibles "undefined" de campos que no han sido rellenados
             error_reporting(E_ERROR | E_PARSE);
 
@@ -60,31 +62,38 @@
                     ALEMAN LIKE '%$aleman%' AND
                     SOFTWARE LIKE '%$software1%' AND
                     NOTAS LIKE '%$notas%'
-                    ORDER BY datos.TELEFONO";
+                    ORDER BY datos.NOMBRE";
 
             $resultadosDatos = mysqli_query($conexion, $queryDatosCandidato);
-            $nombreCandidato = " ";
+            $telefonoCandidato = 0;
+            
+
             if($resultadosDatos == false){
                 echo "Error al encontrar los candidatos. " . mysqli_error($conexion);
             } else {
                 while(($fila = mysqli_fetch_array($resultadosDatos, MYSQLI_ASSOC))){
+                    //$telefonoCandidato = $fila['TELEFONO'];
+                    if($telefonoCandidato != $fila['TELEFONO']){
                     $telefonoCandidato = $fila['TELEFONO'];
-                    if($nombreCandidato != $fila['NOMBRE']){
-                    $nombreCandidato = $fila['NOMBRE'];
+                    $count++;
 
                 echo "<div class='resultadoCandidato'>";
                 echo    "<div class='contenedorResultado'>";
                 echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
-                echo        "<p>".$fila['TELEFONO']."</p>";
+                echo        "<p><b>Telefono: ".$fila['TELEFONO']."</b></p>";
                 echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
-                echo        "<h3>Perfil: " .$fila['PERFIL']."</h3>";
-                echo        "<div class='softwareExperiencia'>";
+                echo        "<h3>Perfil: " .$fila['PERFIL']. "</h3>";
+                echo        "<h3>Titulo: " .$fila['TITULO']. "</h3>";
+                echo        "<h3>Sector: " .$fila['SECTOR']. "</h3>";
+                echo        "<h3>Ingles: " .$fila['INGLES']. "</h3>";
+                echo        "<h3>Aleman: </h3>" .$fila['ALEMAN']. "</h3>";
+                echo        "<div class='softwareExperiencia'>
+                                <h3>Softwares: </h3>";
                 
 
                 $queryBuscarSoftwareCandidato = "SELECT * FROM `softwares` WHERE TELEFONO = '$telefonoCandidato'";
                 $resultadosSoftware = mysqli_query($conexion, $queryBuscarSoftwareCandidato);
 
-                // NO FUNCIONA BIEN ASÍ. SE INSERTAN EN EL PRIMER CANDIDATO QUE APAREZCA TODOS LOS SOFTWARES QUE ENCUENTRA
                 if($resultadosSoftware == false){
                     echo "No se han encontrado softwares para este candidato";
                 }else{
