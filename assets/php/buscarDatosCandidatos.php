@@ -71,44 +71,50 @@
                     
                     $telefonoCandidato = $fila['TELEFONO'];
 
-                    echo "<div class='resultadoCandidato'>";
-                echo    "<div class='contenedorResultado'>";
-                echo        "<h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>";
-                echo        "<p><b>Telefono: ".$fila['TELEFONO']."</b></p>";
-                echo        "<h3>Departamento: ".$fila['DEPARTAMENTO']."</h3>";
-                echo        "<h3>Perfil: " .$fila['PERFIL']. "</h3>";
-                echo        "<h3>Titulo: " .$fila['TITULO']. "</h3>";
-                echo        "<h3>Sector: " .$fila['SECTOR']. "</h3>";
-                echo        "<h3>Ingles: " .$fila['INGLES']. "</h3>";
-                echo        "<h3>Aleman: </h3>" .$fila['ALEMAN']. "</h3>";
-                echo        "<div class='softwareExperiencia'>
-                                <h3>Softwares: </h3>";
+                    echo "<div class='resultadoCandidato'>
+                            <div class='contenedorResultado'>
+                                <h1>". $fila['NOMBRE'] . " " . $fila['APELLIDOS']."</h1>
+                                <h3>Telefono: ".$fila['TELEFONO']."</h3>
+                                <div>
+                                    <div id='datos-en-busqueda'>
+                                        <p><b>Departamento: </b>".$fila['DEPARTAMENTO']."</p>
+                                        <p><b>Perfil: </b>" .$fila['PERFIL']. "</p>
+                                        <p><b>Titulo: </b>" .$fila['TITULO']. "</p>
+                                        <p><b>Sector: </b>" .$fila['SECTOR']. "</p>
+                                        <br>
+                                        <p><b>Ingles: </b>" .$fila['INGLES']. "</p>
+                                        <p><b>Aleman: </b>" .$fila['ALEMAN']. "</p>
+                                    </div>
+                                    <div class='softwareExperiencia'>
+                                        <br>
+                                        <h3>Softwares: </h3>";
                     
 
-                    $queryBuscarSoftwareCandidato = "SELECT * FROM `softwares` WHERE TELEFONO = '$telefonoCandidato'";
-                    $resultadosSoftware = mysqli_query($conexion, $queryBuscarSoftwareCandidato);
+                                        $queryBuscarSoftwareCandidato = "SELECT * FROM `softwares` WHERE TELEFONO = '$telefonoCandidato'";
+                                        $resultadosSoftware = mysqli_query($conexion, $queryBuscarSoftwareCandidato);
 
-                    if($resultadosSoftware == false){
-                        echo "No se han encontrado softwares para este candidato";
-                    }else{
-                        while(($fila2 = mysqli_fetch_array($resultadosSoftware, MYSQLI_ASSOC))){
-                        echo   "<p>".$fila2['SOFTWARE']."  ".$fila2['EXPERIENCIA']."</p>";
-                        }
-                    }
-
-                    echo        "</div>";
-                    echo    "</div>";
-                    echo    "<div class='contenedorResultado'>";
-                    echo        "<div class='botones-candidato'>";
-                    echo        "<button id='boton-ver-cv'><a href='../../rutacv.html?tln=$telefonoCandidato' target='_blank'>Ver CV</a></button>";
-                    echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
-                    echo        "</div>";
-                    echo        "<div class='notas-candidato-resultado'>";
-                    echo            "<h5>Notas: </h5>";
-                    echo            "<p>  ". $fila['NOTAS'] ."</p>";
-                    echo        "</div>";
-                    echo    "</div>";
-                    echo "</div>";
+                                        if($resultadosSoftware == false){
+                                            echo "No se han encontrado softwares para este candidato";
+                                        }else{
+                                            while(($fila2 = mysqli_fetch_array($resultadosSoftware, MYSQLI_ASSOC))){
+                                            echo   "<p>".$fila2['SOFTWARE']."  ".$fila2['EXPERIENCIA']."</p>";
+                                            }
+                                        }
+                                        
+                        echo        "</div>
+                                </div>
+                            </div>
+                            <div class='contenedorResultado'>
+                                <div class='botones-candidato'>
+                                    <button id='boton-ver-cv'><a href='../../rutacv.html?tln=$telefonoCandidato' target='_blank'>Ver CV</a></button>
+                                    <button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>
+                                </div>
+                                <div class='notas-candidato-resultado'>
+                                    <h5>Notas: </h5>
+                                    <p>  ". $fila['NOTAS'] ."</p>
+                                </div>
+                            </div>
+                        </div>";
                 }
             }
             // Cerramos la conexión

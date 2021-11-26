@@ -300,6 +300,7 @@ display:none;
 div.softwareExperiencia{
     display: block;
     padding: 0px;
+    width: 50%;
 }
 div.botones-candidato{
     padding: 15px 0px 0px 0px;
@@ -325,15 +326,11 @@ div#boton-ver-perfil{
 #h2-login{
     text-align: center;
 }
-input:disabled
-{
-	color   : #1A2740;
-}
-select:disabled
+input:disabled, select:disabled, textarea:disabled
 {
 	color   : black;
 }
-textarea:disabled
-{
-	color   : black;
+#datos-en-busqueda{
+    display: block;
+    width: 50%;
 }

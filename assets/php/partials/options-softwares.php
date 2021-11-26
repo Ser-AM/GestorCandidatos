@@ -43,4 +43,11 @@
     <option value="PDS">PDS</option>
     <option value="PDS FRAMEWORKS">PDS FRAMEWORKS</option>
     <option value="NAVISWORKS">NAVISWORKS</option>
+    <option value="ASPEN HYSYS">ASPEN HYSYS</option>
+    <option value="HTRI">HTRI</option>
+    <option value="AVEVA Diagrams">AVEVA Diagrams</option>
+    <option value="InPlant">InPlant</option>
+    <option value="PipePhase">PipePhase</option>
+    <option value="PipeFLO">PipeFLO</option>
+    <option value="Draftsight">Draftsight</option>
 </optgroup>
