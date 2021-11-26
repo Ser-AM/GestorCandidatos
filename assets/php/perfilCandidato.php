@@ -110,7 +110,7 @@
                                     <fieldset>
                                         <legend>Notas:</legend>
                                         <textarea id='notas' name='notas' rows='14' placeholder='Escribe aquí tus comentarios' disabled>".$fila['NOTAS']."</textarea>
-                                        <button id='boton-ver-cv' type='submit' formaction='../../cvs/CV".$fila['TELEFONO'].".pdf' formtarget='_blank'>Ver CV</button>
+                                        <button id='boton-ver-cv' type='submit' formaction='../../rutacv.html?tln=$telefonoCandidato' formtarget='_blank'>Ver CV</button>
                                     </fieldset>
                                 </div>
                             </div>

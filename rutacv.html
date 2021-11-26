@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="" />
+        <title>Gestor de Candidatos</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/Gestor_Candidatos_Icon.png">
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <script src="assets/js/jquery.min.js"></script>
+    	<script src="assets/js/funciones.js"></script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div id="logo">
+                    <img src="assets/images/Gestor_Candidatos.png" alt="">
+                </div>
+            </div>
+                <nav>
+                    <button><a href="crearCandidato.php">Añadir candidato</a></button>
+                    <button><a href="buscarCandidatos.php">Buscar candidatos</a></button>
+                </nav>
+        </header>
+
+          <script>
+
+            function getParameterByName(name, url=window.location.href) {
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            var telefonoCandidato = getParameterByName('tln');
+
+            function getlink() {
+              var aux = document.createElement('input');
+              aux.setAttribute('value', `Z:/RRHH/02 SELECCIÓN/00 PROCESOS DE SELECCION/CVGESTORDECANDIDATOS/CV${telefonoCandidato}.pdf`);
+              document.body.appendChild(aux);
+              aux.select();
+              document.execCommand('copy');
+              document.body.removeChild(aux);
+              var css = document.createElement('style');
+              var estilo = document.createTextNode('#aviso {position:fixed; z-index: 9999999; top: 50%;left:50%;margin-left: -70px;padding: 20px; background: gold;border-radius: 8px;font-family: sans-serif; max-width: 100px; text-align: center}');
+              css.appendChild(estilo);
+              document.head.appendChild(css);
+              var aviso = document.createElement('div');
+              aviso.setAttribute('id', 'aviso');
+              var contenido = document.createTextNode('Ruta copiada');
+              aviso.appendChild(contenido);
+              document.body.appendChild(aviso);
+              window.load = setTimeout('document.body.removeChild(aviso)', 2000);
+            }
+          </script>
+
+          <div>
+            <a class="getlink" href="javascript:getlink();">Copiar ruta al CV</a>
+          </div>
+    </body>
+</html>

@@ -100,7 +100,7 @@
                     echo    "</div>";
                     echo    "<div class='contenedorResultado'>";
                     echo        "<div class='botones-candidato'>";
-                    echo        "<button id='boton-ver-cv'><a href='C:\wamp64\www\webs_php\GestorCandidatos\cvs\CV".$fila['TELEFONO']."' target='_blank'>Ver CV</a></button>";
+                    echo        "<button id='boton-ver-cv'><a href='../../rutacv.html?tln=$telefonoCandidato' target='_blank'>Ver CV</a></button>";
                     echo        "<button id='boton-ver-perfil'><a href='perfilCandidato.php?tln=$telefonoCandidato' target='_self'>Ver perfil</button></a>"; 
                     echo        "</div>";
                     echo        "<div class='notas-candidato-resultado'>";
