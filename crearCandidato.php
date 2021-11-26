@@ -47,14 +47,14 @@
                                 <div id="titulo-box">
                                     <label for="Titulo">Título:</label>
                                     <select name="titulo" class="programa general" >
-                                        <option value=" " selected>No procede</option>
+                                        <option value="No procede" selected>No procede</option>
                                         <?php include "assets/php/partials/options-titulo.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                 <label for="sector">Sector:</label>
                                     <select  class="programa general" name="sector">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="No procede" selected>No procede</option>
                                         <?php include "assets/php/partials/options-sector.php"?>
                                     </select>                            
                                 </div>
@@ -63,14 +63,14 @@
                                 <div id="titulo-box">
                                 <label for="ingles">Inglés:</label>
                                     <select name="ingles"  class="programa general">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="No procede" selected>No procede</option>
                                         <?php include "assets/php/partials/options-idiomas.php"?>
                                     </select>
                                 </div>
                                 <div id="sector-box">
                                     <label for="aleman">Alemán:</label>
                                     <select  class="programa general" name="aleman">
-                                        <option value=" " selected>No procede</option>
+                                        <option value="No procede" selected>No procede</option>
                                         <?php include "assets/php/partials/options-idiomas.php"?>
                                     </select>
                                 </div>
@@ -89,12 +89,12 @@
                 <fieldset>
                 <div class="seleccionar-especialidad">
                         <select name= "departamento" class="especialidad">
-                            <option value=" "selected disabled hidden>Departamento</option>
+                            <option value=" "selected hidden>Departamento</option>
                             <?php include "assets/php/partials/options-departamento.php"?>
                         </select>
 
                         <select name= "perfil" class="especialidad">
-                            <option selected disabled hidden>Perfil</option>
+                            <option selected hidden>Perfil</option>
                             <?php include "assets/php/partials/options-perfil.php"?>
                             </select>
                     </div>
