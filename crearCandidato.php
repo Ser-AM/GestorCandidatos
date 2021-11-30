@@ -89,12 +89,12 @@
                 <fieldset>
                 <div class="seleccionar-especialidad">
                         <select name= "departamento" class="especialidad">
-                            <option value=" "selected hidden>Departamento</option>
+                            <option value="No definido" selected hidden>Departamento</option>
                             <?php include "assets/php/partials/options-departamento.php"?>
                         </select>
 
                         <select name= "perfil" class="especialidad">
-                            <option selected hidden>Perfil</option>
+                            <option value="No definido" selected hidden>Perfil</option>
                             <?php include "assets/php/partials/options-perfil.php"?>
                             </select>
                     </div>
