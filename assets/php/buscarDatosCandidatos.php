@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <meta name="description" content="" />
         <title>Gestor de Candidatos</title>
-        <link rel="icon" type="image/x-icon" href="assets/images/Gestor_Candidatos_Icon.png">
+        <link rel="icon" type="image/x-icon" href="../images/Gestor_Candidatos_Icon.png">
         <link rel="stylesheet" href="../css/style.css"/>
         <script src="assets/js/jquery.min.js"></script>
     	<script src="assets/js/funciones.js"></script>
